@@ -1,0 +1,3089 @@
+[
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 100,
+    "feature_name": "Feature 100",
+    "max_activation": 26.78125,
+    "threshold": 2.678125,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 2.0989599227905273,
+    "train_activation_std": 3.262073040008545,
+    "train_activation_p95": 8.9765625,
+    "train_activation_p99": 12.796875,
+    "test_activation_mean": 2.027574300765991,
+    "test_activation_std": 3.2055399417877197,
+    "test_activation_p95": 8.796875,
+    "test_activation_p99": 12.6875,
+    "train_positive_count_filtered": 786312,
+    "test_positive_count_filtered": 186338,
+    "train_positive_fraction_filtered": 0.3258455880981774,
+    "test_positive_fraction_filtered": 0.3173649940985215,
+    "activating_examples": [
+      {
+        "activation": 26.78125,
+        "token_id": 10470,
+        "token_text": "operating",
+        "position": 177,
+        "context_text": "happens everytime.\nSupa F Series Spares has been operating for over 25 years and has the right staff in"
+      },
+      {
+        "activation": 25.796875,
+        "token_id": 10726,
+        "token_text": "Stock",
+        "position": 46,
+        "context_text": "-75 Mag w/ MAGBLOCK\nAvailability: In Stock\n10/19 Mec-Gar 9mm"
+      },
+      {
+        "activation": 25.765625,
+        "token_id": 10719,
+        "token_text": "stan",
+        "position": 807,
+        "context_text": "which is also derived grass.\nRuyidan, rostan \"to grow,\" from Mid.Pers. r\u00f4ditan"
+      },
+      {
+        "activation": 25.40625,
+        "token_id": 1554,
+        "token_text": "play",
+        "position": 253,
+        "context_text": "-0) opened Class 5A, Region 1 play by routing Clarksdale last week. It is time to officially"
+      },
+      {
+        "activation": 25.328125,
+        "token_id": 31715,
+        "token_text": "treating",
+        "position": 1109,
+        "context_text": "charges in Paperboard Lagoon\n\nA paper mill wastewater facility was treating 940 tons of paper bags, recycled linerboard"
+      },
+      {
+        "activation": 25.234375,
+        "token_id": 2060,
+        "token_text": "run",
+        "position": 1014,
+        "context_text": "is more affordable to cut out the wind power plant and only run the gas-fired power plant, then it is thought and"
+      },
+      {
+        "activation": 25.1875,
+        "token_id": 4152,
+        "token_text": "print",
+        "position": 392,
+        "context_text": "HISTORY OF THE MALPAS AREAThe following publications are still in print and may be purchased directly from:David Hayns, Stoke"
+      },
+      {
+        "activation": 25.125,
+        "token_id": 10726,
+        "token_text": "Stock",
+        "position": 23,
+        "context_text": ": 02107\n- Availability: In Stock\n- Ex Tax: $8.69\nThis"
+      },
+      {
+        "activation": 25.0,
+        "token_id": 500,
+        "token_text": "it",
+        "position": 4441,
+        "context_text": "Ima Lyer\n\nIman Idyit\n\nI. Spendit\n\nWie Dontcare\n\nthe President misses the whole point of"
+      },
+      {
+        "activation": 25.0,
+        "token_id": 10726,
+        "token_text": "Stock",
+        "position": 40,
+        "context_text": "ated Poster 24x36\n\nAvailability: In Stock\n\n\nPterosaurs DinosaursPoster 24x36"
+      },
+      {
+        "activation": 24.984375,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 1117,
+        "context_text": ".\n\nThe town of Etne during the ice melt and today. (c) today. Inge Aarseth/K"
+      },
+      {
+        "activation": 24.78125,
+        "token_id": 4584,
+        "token_text": "production",
+        "position": 1919,
+        "context_text": "soda fountain, the Coca-Cola Freestyle, was put in production, Coke had a new CEO. But Muhtar Kent didn"
+      },
+      {
+        "activation": 24.75,
+        "token_id": 1264,
+        "token_text": "rit",
+        "position": 552,
+        "context_text": "PC software are genuine licensed on Microsoft Windows?\n\n    srithea345 pointsBadges:\n  \u2022 T-"
+      },
+      {
+        "activation": 24.5,
+        "token_id": 2979,
+        "token_text": "rin",
+        "position": 1530,
+        "context_text": "not an entry in /etc/hosts file for dcwrinv01 which might be affecting your address lookup to be"
+      },
+      {
+        "activation": 24.46875,
+        "token_id": 10470,
+        "token_text": "operating",
+        "position": 758,
+        "context_text": "power is not available.\n- Monitoring attic fan\u2019s operating status, attic temperature and attic humidity from the Solar Controller remote"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8643585104366454,
+    "probe_b_auc_filtered": 0.8943978674868397,
+    "probe_c_auc_filtered": 0.8653520725975584,
+    "probe_a_auc_unfiltered": 0.8643585104366454,
+    "probe_b_auc_unfiltered": 0.8943978674868397,
+    "probe_c_auc_unfiltered": 0.8653520725975584,
+    "train_positive_fraction_unfiltered": 0.3258455880981774,
+    "test_positive_fraction_unfiltered": 0.3173649940985215,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 1572624,
+    "balanced_train_size_unfiltered": 1572624,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 101,
+    "feature_name": "Feature 101",
+    "max_activation": 10.4140625,
+    "threshold": 1.04140625,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.053368523716926575,
+    "train_activation_std": 0.4174192249774933,
+    "train_activation_p95": 0.0,
+    "train_activation_p99": 2.701171875,
+    "test_activation_mean": 0.05176398530602455,
+    "test_activation_std": 0.4101004898548126,
+    "test_activation_p95": 0.0,
+    "test_activation_p99": 2.662109375,
+    "train_positive_count_filtered": 41912,
+    "test_positive_count_filtered": 9934,
+    "train_positive_fraction_filtered": 0.017368220615189403,
+    "test_positive_fraction_filtered": 0.016919274927146972,
+    "activating_examples": [
+      {
+        "activation": 10.4140625,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 108,
+        "context_text": "of legend. And the fourth is as a coward. That is the worst aspect of him.\nLarry Hilbloom, perhaps"
+      },
+      {
+        "activation": 10.140625,
+        "token_id": 76651,
+        "token_text": "Msg",
+        "position": 1225,
+        "context_text": "init : Flags -> Navigation.Location -> ( Model, Cmd Msg )\ninit flags location =\n        currentRoute ="
+      },
+      {
+        "activation": 9.7109375,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 54,
+        "context_text": "have to predict if an asset goes up or down, this is compensated by extremely large payout rates.Homepage Us Stock Market Graph"
+      },
+      {
+        "activation": 9.265625,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 111,
+        "context_text": "it because peppermint tea during Christmas is my favorite, but this is a mint tea that I enjoy all year round! Yum!"
+      },
+      {
+        "activation": 9.234375,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 344,
+        "context_text": "the legal arguments currently used to challenge\u00a0DOMA. This is an important legal argument DOJ could use in the lower courts,"
+      },
+      {
+        "activation": 8.9453125,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 9,
+        "context_text": "<bos>The Eye of Ra or Eye of Re is a being in ancient Egyptian mythology that functions as a feminine counterpart"
+      },
+      {
+        "activation": 8.7734375,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 101,
+        "context_text": "more or less confirmed the purpose of the flight, and it is said that Merkel's chief of staff, Ronald Pof"
+      },
+      {
+        "activation": 8.6640625,
+        "token_id": 708,
+        "token_text": "are",
+        "position": 113,
+        "context_text": ": many Sierra Club members remain opposed to hunting and many hunters are suspicious of welcoming gestures from \"left-wing tree huggers"
+      },
+      {
+        "activation": 8.6015625,
+        "token_id": 158037,
+        "token_text": "MIDI",
+        "position": 1,
+        "context_text": "<bos>MIDI software programs let engineers combine multiple electronic instruments.\n\n\u00a9 Marcus"
+      },
+      {
+        "activation": 8.578125,
+        "token_id": 575,
+        "token_text": "in",
+        "position": 3941,
+        "context_text": "you want to reference an image, just add `!` in front of the square bracket.\nIn that situation, the"
+      },
+      {
+        "activation": 8.3046875,
+        "token_id": 110745,
+        "token_text": "Marin",
+        "position": 1,
+        "context_text": "<bos>Marin Hinkle - Original Auction Lot #403\nActress"
+      },
+      {
+        "activation": 8.265625,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 114,
+        "context_text": "18 at 10:06 am. It is posted on the Wedding Dress category. J Crew Wedding Dress Store"
+      },
+      {
+        "activation": 8.125,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 261,
+        "context_text": "more widespread use of CO2 in food retail applications. This is particular evident in smaller systems where the complexity of cascade systems increases"
+      },
+      {
+        "activation": 8.109375,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 601,
+        "context_text": "the guardian, consider a compromise where one spouse\u2019s relative is guardian of the children, and the other spouse\u2019s relative"
+      },
+      {
+        "activation": 8.1015625,
+        "token_id": 603,
+        "token_text": "is",
+        "position": 5,
+        "context_text": "<bos>Egg Monsters from Mars is the forty-second book in the original Goosebumps book series"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9044318216828408,
+    "probe_b_auc_filtered": 0.927774775297573,
+    "probe_c_auc_filtered": 0.9052074293570025,
+    "probe_a_auc_unfiltered": 0.9044318216828408,
+    "probe_b_auc_unfiltered": 0.927774775297573,
+    "probe_c_auc_unfiltered": 0.9052074293570025,
+    "train_positive_fraction_unfiltered": 0.017368220615189403,
+    "test_positive_fraction_unfiltered": 0.016919274927146972,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 83824,
+    "balanced_train_size_unfiltered": 83824,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 102,
+    "feature_name": "Feature 102",
+    "max_activation": 21.65625,
+    "threshold": 2.165625,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 1.0051156282424927,
+    "train_activation_std": 2.1743130683898926,
+    "train_activation_p95": 5.9453125,
+    "train_activation_p99": 9.234375,
+    "test_activation_mean": 0.9954938292503357,
+    "test_activation_std": 2.1562342643737793,
+    "test_activation_p95": 5.8828125,
+    "test_activation_p99": 9.140625,
+    "train_positive_count_filtered": 503692,
+    "test_positive_count_filtered": 122034,
+    "train_positive_fraction_filtered": 0.2087286165801198,
+    "test_positive_fraction_filtered": 0.20784445303598284,
+    "activating_examples": [
+      {
+        "activation": 21.65625,
+        "token_id": 1185,
+        "token_text": "when",
+        "position": 481,
+        "context_text": ", the strong dude couldn\u2019t impose his will. But when that dude has a few buddies that\u2019s all it really"
+      },
+      {
+        "activation": 20.390625,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 4243,
+        "context_text": "Artois, Champagne,\nEastern Normandy, Eastern France, into a consistent whole, so far as all\nreal things are"
+      },
+      {
+        "activation": 19.484375,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 31,
+        "context_text": "and what I made with one of them\nI recently came into a 25lb package of oats, so Annie and"
+      },
+      {
+        "activation": 19.375,
+        "token_id": 1498,
+        "token_text": "did",
+        "position": 103,
+        "context_text": "when we focus on being on a budget? Because when I did a cost-analysis on the recipe I tried, it actually"
+      },
+      {
+        "activation": 19.15625,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 180,
+        "context_text": "systems the pioneers in the trade from quite long time now is into the copper-based Ethernet variety of plant gear from a good"
+      },
+      {
+        "activation": 19.15625,
+        "token_id": 1498,
+        "token_text": "did",
+        "position": 654,
+        "context_text": "briefly pay attention to something other than FPS action.\n\nThey did have a couple of things over the Bioshock hacking, though"
+      },
+      {
+        "activation": 19.140625,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 48,
+        "context_text": "match between Sunderland RCA and Morpeth Town was abandoned seven minutes into the second half by the referee due to poor visibility."
+      },
+      {
+        "activation": 19.140625,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 777,
+        "context_text": "brought the trial on.\n\n        Imagine a straight highway west into the mirage with flatland farms on the right and ranchland"
+      },
+      {
+        "activation": 19.125,
+        "token_id": 3900,
+        "token_text": "doing",
+        "position": 1089,
+        "context_text": "that my own lack of usage made me super aware of others doing what I could not. I laughed at them, but was"
+      },
+      {
+        "activation": 19.078125,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 1222,
+        "context_text": ", during most of the 1950s and into the 1960s under the Dwight D."
+      },
+      {
+        "activation": 18.90625,
+        "token_id": 1498,
+        "token_text": "did",
+        "position": 60,
+        "context_text": "alternate between weight training and cardio days\nWhat if you just did a little of both every single day?\nYou must have"
+      },
+      {
+        "activation": 18.671875,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 408,
+        "context_text": "at the other end away from the construction chaos. After settling into our room, we decided to venture out to explore and grab"
+      },
+      {
+        "activation": 18.671875,
+        "token_id": 1185,
+        "token_text": "when",
+        "position": 1084,
+        "context_text": "kefir, and sauerkraut, aged cheese etc. even pickles when they have not been heated during canning or to pasteurize"
+      },
+      {
+        "activation": 18.609375,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 292,
+        "context_text": "cold. What\u2019s home mean when they moved so often into shacks and tents that stank of other people\u2019s"
+      },
+      {
+        "activation": 18.484375,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 2312,
+        "context_text": "engagement.\nYou're seeing the design field itself mature into these more complex spaces, but then you're also seeing"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8978172735582015,
+    "probe_b_auc_filtered": 0.9217108536001692,
+    "probe_c_auc_filtered": 0.9003738164216968,
+    "probe_a_auc_unfiltered": 0.8978172735582015,
+    "probe_b_auc_unfiltered": 0.9217108536001692,
+    "probe_c_auc_unfiltered": 0.9003738164216968,
+    "train_positive_fraction_unfiltered": 0.2087286165801198,
+    "test_positive_fraction_unfiltered": 0.20784445303598284,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 1007384,
+    "balanced_train_size_unfiltered": 1007384,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 103,
+    "feature_name": "Feature 103",
+    "max_activation": 19.71875,
+    "threshold": 1.971875,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.1545899361371994,
+    "train_activation_std": 0.9389341473579407,
+    "train_activation_p95": 0.0,
+    "train_activation_p99": 3.85546875,
+    "test_activation_mean": 0.16307111084461212,
+    "test_activation_std": 0.9594780206680298,
+    "test_activation_p95": 0.0,
+    "test_activation_p99": 3.90625,
+    "train_positive_count_filtered": 102326,
+    "test_positive_count_filtered": 26295,
+    "train_positive_fraction_filtered": 0.04240362050653442,
+    "test_positive_fraction_filtered": 0.04478481318797359,
+    "activating_examples": [
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Pure-bred or Composite? - How 'pure' is"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>PML gene\n\npromyelocytic leukemia\n\nThe PML gene"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>So as not to derail the 100 C thread"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Teen Saal, Na Naukari, Na Dal, Bas Haz"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>The Day of DH is over in Madrid as I write this"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>As indicated in Have there been any studies done on how fluorescent"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Home Educational Games & Gamification How Gamification Through Mobile Apps"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Academic Questions\n\n, Volume 27, Issue\u00a04"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Her Angst: A killer is stalking the streets of Manhattan,"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>The Valley Baptist Legacy Foundation focuses its grantmaking on organizations that"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Features list2019-02-26"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>the exact moment she fell in love is difficult to pinpoint."
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>9 facts you didn\u2019t know about stars\n\nApril"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos># Article R417-16\n\nApr\u00e8s la"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>The time has come for the nine brothers to go to work"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8975062138507014,
+    "probe_b_auc_filtered": 0.9118983890916643,
+    "probe_c_auc_filtered": 0.8966230236779915,
+    "probe_a_auc_unfiltered": 0.8975062138507014,
+    "probe_b_auc_unfiltered": 0.9118983890916643,
+    "probe_c_auc_unfiltered": 0.8966230236779915,
+    "train_positive_fraction_unfiltered": 0.04240362050653442,
+    "test_positive_fraction_unfiltered": 0.04478481318797359,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 204652,
+    "balanced_train_size_unfiltered": 204652,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 104,
+    "feature_name": "Feature 104",
+    "max_activation": 25.53125,
+    "threshold": 2.553125,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.40861907601356506,
+    "train_activation_std": 1.611981749534607,
+    "train_activation_p95": 3.44140625,
+    "train_activation_p99": 6.91015625,
+    "test_activation_mean": 0.40923604369163513,
+    "test_activation_std": 1.6134408712387085,
+    "test_activation_p95": 3.43359375,
+    "test_activation_p99": 6.89453125,
+    "train_positive_count_filtered": 178348,
+    "test_positive_count_filtered": 43465,
+    "train_positive_fraction_filtered": 0.07390693382033307,
+    "test_positive_fraction_filtered": 0.07402821468778369,
+    "activating_examples": [
+      {
+        "activation": 25.53125,
+        "token_id": 76393,
+        "token_text": "Investment",
+        "position": 1,
+        "context_text": "<bos>Investment advisors have earned properly through the mutual finance New Account Offer\u2019"
+      },
+      {
+        "activation": 25.34375,
+        "token_id": 573,
+        "token_text": "the",
+        "position": 463,
+        "context_text": "tested a hydrogen bomb which set a wave of tension all across the peninsula.\n\nIn the midst of these developments, Donald Trump"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>As indicated in Have there been any studies done on how fluorescent"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>PML gene\n\npromyelocytic leukemia\n\nThe PML gene"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>The Day of DH is over in Madrid as I write this"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>the exact moment she fell in love is difficult to pinpoint."
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>The time has come for the nine brothers to go to work"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Home Educational Games & Gamification How Gamification Through Mobile Apps"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>9 facts you didn\u2019t know about stars\n\nApril"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Academic Questions\n\n, Volume 27, Issue\u00a04"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Features list2019-02-26"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Her Angst: A killer is stalking the streets of Manhattan,"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos># Article R417-16\n\nApr\u00e8s la"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>The Valley Baptist Legacy Foundation focuses its grantmaking on organizations that"
+      },
+      {
+        "activation": 25.28125,
+        "token_id": 2,
+        "token_text": "<bos>",
+        "position": 0,
+        "context_text": "<bos>Teen Saal, Na Naukari, Na Dal, Bas Haz"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8936560360902791,
+    "probe_b_auc_filtered": 0.9220496409000446,
+    "probe_c_auc_filtered": 0.8939093880464449,
+    "probe_a_auc_unfiltered": 0.8936560360902791,
+    "probe_b_auc_unfiltered": 0.9220496409000446,
+    "probe_c_auc_unfiltered": 0.8939093880464449,
+    "train_positive_fraction_unfiltered": 0.07390693382033307,
+    "test_positive_fraction_unfiltered": 0.07402821468778369,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 356696,
+    "balanced_train_size_unfiltered": 356696,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 105,
+    "feature_name": "Feature 105",
+    "max_activation": 31.359375,
+    "threshold": 3.1359375000000003,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 1.0019192695617676,
+    "train_activation_std": 2.612650156021118,
+    "train_activation_p95": 7.02734375,
+    "train_activation_p99": 12.125,
+    "test_activation_mean": 0.9598624110221863,
+    "test_activation_std": 2.5552635192871094,
+    "test_activation_p95": 6.83984375,
+    "test_activation_p99": 11.9375,
+    "train_positive_count_filtered": 321024,
+    "test_positive_count_filtered": 75107,
+    "train_positive_fraction_filtered": 0.13303148632302353,
+    "test_positive_fraction_filtered": 0.12791986933292004,
+    "activating_examples": [
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import java.util.Scanner;\npublic class Proyec"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import {\n  CHANGE_COLOR,\n  DEFAULT_COLOR"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import java.awt.*;\n\npublic class NinjaCat extends Critter"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import { Group } from \"./three.module.js\";"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import tensorflow as tf\nfrom tensorflow.keras.layers import Dense"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import { Document, model, Model, Schema, Types } from"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import logging\n\n\nclass MixedClassMeta(type):\n    \"\"\""
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import CategoryTypes from './category.types';\nimport axios from"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import os\nimport re\n#from zipfile import ZipFile"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import Layer, { ILayerEvent, ILayerState } from"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import { hash } from 'bcryptjs';\nimport { Router }"
+      },
+      {
+        "activation": 31.359375,
+        "token_id": 809,
+        "token_text": "import",
+        "position": 1,
+        "context_text": "<bos>import { User } from '../js/user.js';"
+      },
+      {
+        "activation": 31.265625,
+        "token_id": 89626,
+        "token_text": "addition",
+        "position": 1,
+        "context_text": "<bos>addition reaction\n\nAn addition reaction is a type of chemical reaction in"
+      },
+      {
+        "activation": 30.734375,
+        "token_id": 12809,
+        "token_text": "installation",
+        "position": 1031,
+        "context_text": "linus root]# apt-get install hello\n[snip installation]\n\n[root at linus root]# time hello"
+      },
+      {
+        "activation": 30.515625,
+        "token_id": 67503,
+        "token_text": "interview",
+        "position": 1,
+        "context_text": "<bos>interview was done shortly after General Efrain Rios Montt was convicted"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9175750686426131,
+    "probe_b_auc_filtered": 0.9424683770669087,
+    "probe_c_auc_filtered": 0.9189803386981928,
+    "probe_a_auc_unfiltered": 0.9175750686426131,
+    "probe_b_auc_unfiltered": 0.9424683770669087,
+    "probe_c_auc_unfiltered": 0.9189803386981928,
+    "train_positive_fraction_unfiltered": 0.13303148632302353,
+    "test_positive_fraction_unfiltered": 0.12791986933292004,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 642048,
+    "balanced_train_size_unfiltered": 642048,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 106,
+    "feature_name": "Feature 106",
+    "max_activation": 12.46875,
+    "threshold": 1.2468750000000002,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.21648579835891724,
+    "train_activation_std": 0.8505145907402039,
+    "train_activation_p95": 2.45703125,
+    "train_activation_p99": 4.2578125,
+    "test_activation_mean": 0.21957175433635712,
+    "test_activation_std": 0.8574101328849792,
+    "test_activation_p95": 2.47265625,
+    "test_activation_p99": 4.2734375,
+    "train_positive_count_filtered": 161599,
+    "test_positive_count_filtered": 39860,
+    "train_positive_fraction_filtered": 0.06696619305196584,
+    "test_positive_fraction_filtered": 0.06788829259070649,
+    "activating_examples": [
+      {
+        "activation": 12.46875,
+        "token_id": 576,
+        "token_text": "of",
+        "position": 324,
+        "context_text": "localized demand spike did not affect our ability to meet the needs of other users.\n\nEnter the Spampede Filter\n\nThe Spam"
+      },
+      {
+        "activation": 11.5625,
+        "token_id": 578,
+        "token_text": "and",
+        "position": 167,
+        "context_text": "pleaded guilty last December to sexually assaulting one student and providing him and another student with marijuana.\n\"I am appalled and what"
+      },
+      {
+        "activation": 10.9375,
+        "token_id": 511,
+        "token_text": "to",
+        "position": 1655,
+        "context_text": "was removed by the Roman governor Guratus, the predecessor\u00a0to Pontius Pilate. The other man, Caiaphas,"
+      },
+      {
+        "activation": 10.890625,
+        "token_id": 64465,
+        "token_text": "supernatural",
+        "position": 491,
+        "context_text": "have been mentioned, so he probably doesn\u2019t have a supernatural origin. Odds are, Talzin held a tournament amongst the"
+      },
+      {
+        "activation": 10.453125,
+        "token_id": 235290,
+        "token_text": "-",
+        "position": 873,
+        "context_text": ", including brigade commanders Major-General Sir Robert Sale and Major-General Sir John John McCaskill.\n\nThe Battle of"
+      },
+      {
+        "activation": 10.421875,
+        "token_id": 578,
+        "token_text": "and",
+        "position": 406,
+        "context_text": "lacked discipline.\n\nAlthough it contained a small minority of Hindu and Muslim Punjabi and Kashmiri troops, the vast majority of its"
+      },
+      {
+        "activation": 10.421875,
+        "token_id": 577,
+        "token_text": "to",
+        "position": 1595,
+        "context_text": ", she realizes that Ginger had spread the lycanthropy infection to Jason. She confronts Ginger, who appears indifferent to her actions"
+      },
+      {
+        "activation": 10.359375,
+        "token_id": 22051,
+        "token_text": "Quality",
+        "position": 139,
+        "context_text": "Birthstones with Floral Designs\n* Metals Used in High-Quality Jewelry Production\n* Gemstone Selection, Cutting, and Setting"
+      },
+      {
+        "activation": 10.34375,
+        "token_id": 970,
+        "token_text": "my",
+        "position": 773,
+        "context_text": "the whole day with his elder sister. Maya, you know my sister was so beautiful. I could touch her face and say"
+      },
+      {
+        "activation": 10.3125,
+        "token_id": 577,
+        "token_text": "to",
+        "position": 211,
+        "context_text": "basis. Almost a third reported dealing with phishing attacks\u2013attempts to trick users into divulging sensitive information with cleverly disguised messages\u2013"
+      },
+      {
+        "activation": 10.3125,
+        "token_id": 235265,
+        "token_text": ".",
+        "position": 496,
+        "context_text": "\"FATAL ERROR WS10\" And then prompts me to.\nTEXP110 D3D Error. www"
+      },
+      {
+        "activation": 10.296875,
+        "token_id": 7794,
+        "token_text": "aki",
+        "position": 536,
+        "context_text": "USGS photo)\n\nThe fissures themselves, from which the Laki lava flowed, stretch some 16- miles though not"
+      },
+      {
+        "activation": 10.28125,
+        "token_id": 577,
+        "token_text": "to",
+        "position": 306,
+        "context_text": "metastatic. This means that unlike cancerous tumors they will not spread to the internal organs of a horse. It is thought that through"
+      },
+      {
+        "activation": 10.140625,
+        "token_id": 15389,
+        "token_text": "GT",
+        "position": 458,
+        "context_text": "you can play just for fun or for real. The IGT labs have developed some of the 10-Zeiler"
+      },
+      {
+        "activation": 10.125,
+        "token_id": 885,
+        "token_text": "(\"",
+        "position": 476,
+        "context_text": "(urlParams.get(\"username\"), urlParams.get(\"password\"), elm.innerHTML)\n    .then(response"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8213818132925536,
+    "probe_b_auc_filtered": 0.8567534705414401,
+    "probe_c_auc_filtered": 0.8199288210771938,
+    "probe_a_auc_unfiltered": 0.8213818132925536,
+    "probe_b_auc_unfiltered": 0.8567534705414401,
+    "probe_c_auc_unfiltered": 0.8199288210771938,
+    "train_positive_fraction_unfiltered": 0.06696619305196584,
+    "test_positive_fraction_unfiltered": 0.06788829259070649,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 323198,
+    "balanced_train_size_unfiltered": 323198,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 107,
+    "feature_name": "Feature 107",
+    "max_activation": 31.015625,
+    "threshold": 3.1015625,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 2.7912843227386475,
+    "train_activation_std": 3.72699236869812,
+    "train_activation_p95": 10.328125,
+    "train_activation_p99": 14.1875,
+    "test_activation_mean": 2.7523884773254395,
+    "test_activation_std": 3.6894028186798096,
+    "test_activation_p95": 10.21875,
+    "test_activation_p99": 14.015625,
+    "train_positive_count_filtered": 911533,
+    "test_positive_count_filtered": 219742,
+    "train_positive_fraction_filtered": 0.3777368353222333,
+    "test_positive_fraction_filtered": 0.37425763147182706,
+    "activating_examples": [
+      {
+        "activation": 31.015625,
+        "token_id": 15528,
+        "token_text": "Today",
+        "position": 57,
+        "context_text": "of 1 page(s)\n\n\nTell A Friend\n\nToday is the 4th of July. Remember the Revolution,"
+      },
+      {
+        "activation": 29.78125,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 343,
+        "context_text": "fast to their convictions and deal with the consequences.\n\nIn today\u2019s edition of \u201cLack of Social Media Wisdom,\u201d meet"
+      },
+      {
+        "activation": 29.734375,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 56,
+        "context_text": "officially kicking off our Bloomin\u2019 Crochet-A-Long today! We are both working on the Hexagon Throw from Cute"
+      },
+      {
+        "activation": 29.375,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 128,
+        "context_text": "& it's so, so cold!\nSo for today I have a little giveaway, let me tell you the story"
+      },
+      {
+        "activation": 29.25,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 178,
+        "context_text": "as their own, for their family and friends.\nSo today I was a bit surprised to see the following occurring on Target"
+      },
+      {
+        "activation": 29.046875,
+        "token_id": 15528,
+        "token_text": "Today",
+        "position": 587,
+        "context_text": ", \"you don't know jack, Jack.\"\n\nToday, if someone says they like a piece, I try to"
+      },
+      {
+        "activation": 28.71875,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 31,
+        "context_text": "Adopt-a-Road Program\n\nI. Introduction\n\nIn today's world, community service has become increasingly important as a"
+      },
+      {
+        "activation": 28.65625,
+        "token_id": 15693,
+        "token_text": "revolution",
+        "position": 318,
+        "context_text": ", distance education is an oxymoron, and the real revolution (so to speak) is in discovering the learning opportunities on"
+      },
+      {
+        "activation": 28.515625,
+        "token_id": 15528,
+        "token_text": "Today",
+        "position": 553,
+        "context_text": "GMO clovers \u2013 but they\u2019re so cool!\nToday I finished this box with a scalloped copper foil edge."
+      },
+      {
+        "activation": 28.46875,
+        "token_id": 15528,
+        "token_text": "Today",
+        "position": 123,
+        "context_text": ". Excellent film. I encourage folks to watch it.\nToday being a Monday holiday (except for Nicholas), we ventured out"
+      },
+      {
+        "activation": 28.375,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 237,
+        "context_text": "back on this now, it speaks directly to the point of today\u2019s topic . . . what happens when good advice goes"
+      },
+      {
+        "activation": 28.28125,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 152,
+        "context_text": "of how we\u00a0actually\u00a0relate to one another\n\nIn today\u2019s Western church world, we more commonly refer to Christ"
+      },
+      {
+        "activation": 27.765625,
+        "token_id": 38850,
+        "token_text": "readings",
+        "position": 28,
+        "context_text": "Reflecting on Museums Through Museum Exhibits\n\nThis week\u2019s readings about Fred Wilson\u2019s exhibit \u201cMining the Museum\u201d reminded"
+      },
+      {
+        "activation": 27.71875,
+        "token_id": 15693,
+        "token_text": "revolution",
+        "position": 680,
+        "context_text": "markets, allowing the same dynamism that incentivized the shale oil revolution created from high oil prices.\n\nStudies with water banks,"
+      },
+      {
+        "activation": 27.703125,
+        "token_id": 4956,
+        "token_text": "received",
+        "position": 496,
+        "context_text": "Scripps and Opening Minds Through Art.\nFrom the day we received Crow Made a Friend by Margaret Peot in the mail,"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8124266046625135,
+    "probe_b_auc_filtered": 0.8647633242442823,
+    "probe_c_auc_filtered": 0.8142214369002525,
+    "probe_a_auc_unfiltered": 0.8124266046625135,
+    "probe_b_auc_unfiltered": 0.8647633242442823,
+    "probe_c_auc_unfiltered": 0.8142214369002525,
+    "train_positive_fraction_unfiltered": 0.3777368353222333,
+    "test_positive_fraction_unfiltered": 0.37425763147182706,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 1823066,
+    "balanced_train_size_unfiltered": 1823066,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 108,
+    "feature_name": "Feature 108",
+    "max_activation": 38.3125,
+    "threshold": 3.8312500000000003,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.9471232295036316,
+    "train_activation_std": 2.0733163356781006,
+    "train_activation_p95": 5.66015625,
+    "train_activation_p99": 8.71875,
+    "test_activation_mean": 0.9886691570281982,
+    "test_activation_std": 2.118664264678955,
+    "test_activation_p95": 5.77734375,
+    "test_activation_p99": 8.8515625,
+    "train_positive_count_filtered": 267456,
+    "test_positive_count_filtered": 67944,
+    "train_positive_fraction_filtered": 0.11083305050716016,
+    "test_positive_fraction_filtered": 0.11572007405376221,
+    "activating_examples": [
+      {
+        "activation": 38.3125,
+        "token_id": 10709,
+        "token_text": "familiar",
+        "position": 4438,
+        "context_text": "far less strange and fraught, and candle and oil light more familiar to the 19th and 20th century"
+      },
+      {
+        "activation": 33.1875,
+        "token_id": 51655,
+        "token_text": "accustomed",
+        "position": 237,
+        "context_text": "plant accidents are no different from the mechanical malfunctions we have become accustomed to. Hundreds of nuclear reactors are in operation, and there"
+      },
+      {
+        "activation": 33.0625,
+        "token_id": 32113,
+        "token_text": "stranger",
+        "position": 1650,
+        "context_text": "and a chest of money.\n\nUsamah was no stranger to violent behavior himself. As he wrote in his memoirs,"
+      },
+      {
+        "activation": 32.9375,
+        "token_id": 51655,
+        "token_text": "accustomed",
+        "position": 1549,
+        "context_text": "an affair between the two sprang up, but Burton was well accustomed to sex scandals. He caused one when he translated the Kama"
+      },
+      {
+        "activation": 32.625,
+        "token_id": 32113,
+        "token_text": "stranger",
+        "position": 51,
+        "context_text": "vegetables inside the dimly lit restaurant.\nDaoud is no stranger to the plight of homelessness. In 1999"
+      },
+      {
+        "activation": 32.5,
+        "token_id": 80319,
+        "token_text": "normalization",
+        "position": 514,
+        "context_text": "ahead of us?\n\nHabituated disconnection. A normalization of lacking empathy, care, or belief. This is the"
+      },
+      {
+        "activation": 32.3125,
+        "token_id": 51655,
+        "token_text": "accustomed",
+        "position": 247,
+        "context_text": "\u201cass training\u201d to stretch out the anus and get one accustomed to having something in their ass.\n\nAnal Sex - Any"
+      },
+      {
+        "activation": 31.234375,
+        "token_id": 51655,
+        "token_text": "accustomed",
+        "position": 3221,
+        "context_text": "37 as a widower with four bachelor sons. Now accustomed to living in elegant style, he immediately began to refurbish"
+      },
+      {
+        "activation": 31.078125,
+        "token_id": 1671,
+        "token_text": "used",
+        "position": 293,
+        "context_text": "Brook, who counsels affluent investors. \"Clients have gotten very used to the volatility and are becoming more savvy.\"\nJeff Baer"
+      },
+      {
+        "activation": 30.828125,
+        "token_id": 10709,
+        "token_text": "familiar",
+        "position": 340,
+        "context_text": "first, but the more I learnt of them and the more familiar I became with them, the more I liked them."
+      },
+      {
+        "activation": 30.765625,
+        "token_id": 577,
+        "token_text": "to",
+        "position": 228,
+        "context_text": "poppies. Three cows graze the hillside; the dogs are used to them and ignore them. You smile a greeting at the young"
+      },
+      {
+        "activation": 30.453125,
+        "token_id": 51655,
+        "token_text": "accustomed",
+        "position": 519,
+        "context_text": "on Savers\n\nSavers in the eurozone have grown accustomed to having their money earn zero interest. In the wake of"
+      },
+      {
+        "activation": 29.421875,
+        "token_id": 577,
+        "token_text": "to",
+        "position": 1225,
+        "context_text": "lot. Although quiet with me at first, after getting used to me, they started joking with me a lot, too,"
+      },
+      {
+        "activation": 29.3125,
+        "token_id": 1671,
+        "token_text": "used",
+        "position": 934,
+        "context_text": "off from France without anyone\u2019s notice as everyone was so used to the loud noises from the engines every night. It was"
+      },
+      {
+        "activation": 29.3125,
+        "token_id": 1671,
+        "token_text": "used",
+        "position": 1536,
+        "context_text": "tolerance will become dangerously intoxicated faster than a larger person who is used to drinking, but anyone can develop alcohol poisoning if they drink"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8865728961750385,
+    "probe_b_auc_filtered": 0.9102973046177212,
+    "probe_c_auc_filtered": 0.8886367507665092,
+    "probe_a_auc_unfiltered": 0.8865728961750385,
+    "probe_b_auc_unfiltered": 0.9102973046177212,
+    "probe_c_auc_unfiltered": 0.8886367507665092,
+    "train_positive_fraction_unfiltered": 0.11083305050716016,
+    "test_positive_fraction_unfiltered": 0.11572007405376221,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 534912,
+    "balanced_train_size_unfiltered": 534912,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 109,
+    "feature_name": "Feature 109",
+    "max_activation": 46.21875,
+    "threshold": 4.621875,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.8208219408988953,
+    "train_activation_std": 2.1044657230377197,
+    "train_activation_p95": 5.6875,
+    "train_activation_p99": 9.5703125,
+    "test_activation_mean": 0.8077147603034973,
+    "test_activation_std": 2.088013172149658,
+    "test_activation_p95": 5.6484375,
+    "test_activation_p99": 9.5234375,
+    "train_positive_count_filtered": 175638,
+    "test_positive_count_filtered": 42055,
+    "train_positive_fraction_filtered": 0.07278391707412284,
+    "test_positive_fraction_filtered": 0.07162674723788665,
+    "activating_examples": [
+      {
+        "activation": 46.21875,
+        "token_id": 6502,
+        "token_text": "accept",
+        "position": 942,
+        "context_text": "clearly stated on the website and the menus however, and I accept that I missed it so I'll be sure to book"
+      },
+      {
+        "activation": 39.34375,
+        "token_id": 15329,
+        "token_text": "realize",
+        "position": 136,
+        "context_text": "me. Not that life is supposed to be fair and I realize that Spiderman's Uncle once said \"With great power comes"
+      },
+      {
+        "activation": 37.53125,
+        "token_id": 578,
+        "token_text": "and",
+        "position": 940,
+        "context_text": "This is clearly stated on the website and the menus however, and I accept that I missed it so I'll be sure"
+      },
+      {
+        "activation": 35.84375,
+        "token_id": 3508,
+        "token_text": "understand",
+        "position": 534,
+        "context_text": "simply because we weren\u2019t attached to their office. I understand that they probably get funding according to the bank accounts attached,"
+      },
+      {
+        "activation": 35.4375,
+        "token_id": 6502,
+        "token_text": "accept",
+        "position": 712,
+        "context_text": "have been much more simple on my part; however, I accept that there are always practical constraints and difficulties in hospitality work,"
+      },
+      {
+        "activation": 34.1875,
+        "token_id": 674,
+        "token_text": "that",
+        "position": 943,
+        "context_text": "stated on the website and the menus however, and I accept that I missed it so I'll be sure to book accordingly"
+      },
+      {
+        "activation": 33.84375,
+        "token_id": 3508,
+        "token_text": "understand",
+        "position": 693,
+        "context_text": "you, the more fun we will have!!\nI do understand the need for discretion, as discretion is important to my life"
+      },
+      {
+        "activation": 32.40625,
+        "token_id": 3508,
+        "token_text": "understand",
+        "position": 256,
+        "context_text": "curious how one would know which is the correct translation. I understand that when translating, one makes a judgement call based upon the"
+      },
+      {
+        "activation": 31.953125,
+        "token_id": 674,
+        "token_text": "that",
+        "position": 137,
+        "context_text": ". Not that life is supposed to be fair and I realize that Spiderman's Uncle once said \"With great power comes great"
+      },
+      {
+        "activation": 31.421875,
+        "token_id": 14777,
+        "token_text": "understood",
+        "position": 133,
+        "context_text": "Mowbray.\n\"I spoke to the boy and he understood the situation. Percentage-wise it was very difficult for us"
+      },
+      {
+        "activation": 30.265625,
+        "token_id": 4647,
+        "token_text": "necessary",
+        "position": 486,
+        "context_text": "be people out of work.\"\n\nOthers insist that automation is necessary and will eventually bring new jobs.\n\nEliza Rawlings,"
+      },
+      {
+        "activation": 29.390625,
+        "token_id": 1230,
+        "token_text": "know",
+        "position": 1084,
+        "context_text": "no street parking available due to the continual road works. I know that you can't do anything about that, but I"
+      },
+      {
+        "activation": 29.328125,
+        "token_id": 3508,
+        "token_text": "understand",
+        "position": 732,
+        "context_text": "I would have continued were it not for you.\nI understand why you did not accept my proposal, now. You were"
+      },
+      {
+        "activation": 29.296875,
+        "token_id": 3508,
+        "token_text": "understand",
+        "position": 574,
+        "context_text": "America\u2019s post-recession wisdom was disappointing. I understand how it is to lose one\u2019s job and lose one"
+      },
+      {
+        "activation": 28.921875,
+        "token_id": 3508,
+        "token_text": "understand",
+        "position": 95,
+        "context_text": "OSS software but in the end they decide what happens. I understand that some people see it black and white, but in my"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9283823503822278,
+    "probe_b_auc_filtered": 0.9493000995791161,
+    "probe_c_auc_filtered": 0.9285007254620129,
+    "probe_a_auc_unfiltered": 0.9283823503822278,
+    "probe_b_auc_unfiltered": 0.9493000995791161,
+    "probe_c_auc_unfiltered": 0.9285007254620129,
+    "train_positive_fraction_unfiltered": 0.07278391707412284,
+    "test_positive_fraction_unfiltered": 0.07162674723788665,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 351276,
+    "balanced_train_size_unfiltered": 351276,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 110,
+    "feature_name": "Feature 110",
+    "max_activation": 22.484375,
+    "threshold": 2.2484375,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 1.159218192100525,
+    "train_activation_std": 2.290935754776001,
+    "train_activation_p95": 6.35546875,
+    "train_activation_p99": 9.3125,
+    "test_activation_mean": 1.1506545543670654,
+    "test_activation_std": 2.2831668853759766,
+    "test_activation_p95": 6.33984375,
+    "test_activation_p99": 9.2734375,
+    "train_positive_count_filtered": 567632,
+    "test_positive_count_filtered": 137429,
+    "train_positive_fraction_filtered": 0.2352251814335081,
+    "test_positive_fraction_filtered": 0.23406473061836935,
+    "activating_examples": [
+      {
+        "activation": 22.484375,
+        "token_id": 1049,
+        "token_text": "were",
+        "position": 747,
+        "context_text": "of Pilmuir Works was formally constituted. Plans for public meeting were initiated with flyers and posters as well as online promotion."
+      },
+      {
+        "activation": 22.234375,
+        "token_id": 8616,
+        "token_text": "husband",
+        "position": 2898,
+        "context_text": "19)\n\nHannah Hoes Van Buren and her future husband were cousins in a close-knit Dutch community. They grew"
+      },
+      {
+        "activation": 21.359375,
+        "token_id": 3293,
+        "token_text": "begin",
+        "position": 341,
+        "context_text": "we do.\nShortly before the noon dedication was slated to begin, a car drove by and threw out four business cards in"
+      },
+      {
+        "activation": 21.046875,
+        "token_id": 3532,
+        "token_text": "visit",
+        "position": 130,
+        "context_text": "in a New York City Suburb.\n\nPrior to their visit, Chris asks Rose if she told her parents that he is"
+      },
+      {
+        "activation": 20.75,
+        "token_id": 10640,
+        "token_text": "proceed",
+        "position": 605,
+        "context_text": "and current symptoms. The doctor will then assess your spine and proceed to lay out a treatment plan. The goal is to resolve"
+      },
+      {
+        "activation": 20.703125,
+        "token_id": 10640,
+        "token_text": "proceed",
+        "position": 33,
+        "context_text": "drug-free workplace policy in place. It is important to proceed with caution and to document any actions you take.\nFor"
+      },
+      {
+        "activation": 20.671875,
+        "token_id": 7957,
+        "token_text": "trip",
+        "position": 676,
+        "context_text": "to take a very proactive security posture in planning his or her trip. Contact your bank to upgrade the magnetic strip cards to chip"
+      },
+      {
+        "activation": 20.09375,
+        "token_id": 10286,
+        "token_text": "procedure",
+        "position": 2923,
+        "context_text": "extend OS behaviour. SOS has unique terms for the use of procedure pointers :\n  \u2022 GATE\n    SOS name for a"
+      },
+      {
+        "activation": 20.09375,
+        "token_id": 1144,
+        "token_text": "am",
+        "position": 646,
+        "context_text": "to package the toiles up and freight them back so I am betting that is a week of transit and border delays. Believe"
+      },
+      {
+        "activation": 20.046875,
+        "token_id": 40043,
+        "token_text": "Surgery",
+        "position": 312,
+        "context_text": "navigate your unique recovery process.\n\n  1. Preparing for Surgery: Empowerment, Education, Research, Health Insurance\n\nPreparing for"
+      },
+      {
+        "activation": 19.9375,
+        "token_id": 235269,
+        "token_text": ",",
+        "position": 829,
+        "context_text": "for the eventual 8-day journey from France to Israel, the crew working on the ship secretly snuck in small amounts"
+      },
+      {
+        "activation": 19.71875,
+        "token_id": 31278,
+        "token_text": "Preparation",
+        "position": 74,
+        "context_text": "the goal is to have fun!\n\nStep 1: Preparation\nProper preparation sets the foundation for having a great time at"
+      },
+      {
+        "activation": 19.5625,
+        "token_id": 38743,
+        "token_text": "proceeded",
+        "position": 285,
+        "context_text": "ask my first customer if she was okay with it before I proceeded as I didn\u2019t want her to feel like her gift"
+      },
+      {
+        "activation": 19.390625,
+        "token_id": 1476,
+        "token_text": "need",
+        "position": 226,
+        "context_text": "5\nPour Glaze In and On\nGlazes for pouring need to be the same consistency as dipping glazes and is often"
+      },
+      {
+        "activation": 19.390625,
+        "token_id": 665,
+        "token_text": "it",
+        "position": 1443,
+        "context_text": "will be the norm by the time the AES algorithm is selected it makes little sense to judge the speed of these algorithms on"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8736951438015467,
+    "probe_b_auc_filtered": 0.9030955479022973,
+    "probe_c_auc_filtered": 0.8729879707547389,
+    "probe_a_auc_unfiltered": 0.8736951438015467,
+    "probe_b_auc_unfiltered": 0.9030955479022973,
+    "probe_c_auc_unfiltered": 0.8729879707547389,
+    "train_positive_fraction_unfiltered": 0.2352251814335081,
+    "test_positive_fraction_unfiltered": 0.23406473061836935,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 1135264,
+    "balanced_train_size_unfiltered": 1135264,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 111,
+    "feature_name": "Feature 111",
+    "max_activation": 22.90625,
+    "threshold": 2.290625,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 2.1348226070404053,
+    "train_activation_std": 3.2552742958068848,
+    "train_activation_p95": 9.03125,
+    "train_activation_p99": 12.7890625,
+    "test_activation_mean": 2.130199670791626,
+    "test_activation_std": 3.2408461570739746,
+    "test_activation_p95": 8.96875,
+    "test_activation_p99": 12.7421875,
+    "train_positive_count_filtered": 873796,
+    "test_positive_count_filtered": 212880,
+    "train_positive_fraction_filtered": 0.36209872353192496,
+    "test_positive_fraction_filtered": 0.3625704898823281,
+    "activating_examples": [
+      {
+        "activation": 22.90625,
+        "token_id": 40836,
+        "token_text": "thereafter",
+        "position": 335,
+        "context_text": ", the foundation received funds for its grantmaking program. Soon thereafter, the foundation changed its name to the Valley Baptist Legacy Foundation"
+      },
+      {
+        "activation": 22.84375,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 318,
+        "context_text": ", decrease students' time to degree, and strengthen their preparedness for entry into the computing workforce. Further, the development of inclusive"
+      },
+      {
+        "activation": 22.109375,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 357,
+        "context_text": "historic preservation, and public history. History is also excellent preparation for graduate school in these and other fields.\nView the complete"
+      },
+      {
+        "activation": 22.046875,
+        "token_id": 123693,
+        "token_text": "incarnation",
+        "position": 491,
+        "context_text": ", but as a member of the Guardian Angels during their first incarnation in the city back in the 1980s"
+      },
+      {
+        "activation": 21.78125,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 48,
+        "context_text": "staple and we go through a LOT of this stuff. More than I care to admit because just 2 tablespoons contain about"
+      },
+      {
+        "activation": 21.75,
+        "token_id": 40836,
+        "token_text": "thereafter",
+        "position": 559,
+        "context_text": "once again, packed it into crates and hid it. Shortly thereafter, the Soviets bombed the castle to ruins. Based on reports"
+      },
+      {
+        "activation": 21.640625,
+        "token_id": 1185,
+        "token_text": "when",
+        "position": 659,
+        "context_text": "has become the \u201cFlickr of audio\u201d I predicted it might when it was launched back in 2008. So"
+      },
+      {
+        "activation": 21.5625,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 41,
+        "context_text": "could become even more salubrious if manufacturers embraced new technology for making \"fruit-juice-infused chocolate,\" a scientist"
+      },
+      {
+        "activation": 21.453125,
+        "token_id": 40836,
+        "token_text": "thereafter",
+        "position": 455,
+        "context_text": "'s musical tendencies took more serious form in college and immediately thereafter. While attending college in Santa Fe, N.M,"
+      },
+      {
+        "activation": 21.40625,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 32,
+        "context_text": "executive director of academic outreach and development and associate director of admissions for UCLA School of Law, and Norma Nava \u201905,"
+      },
+      {
+        "activation": 21.390625,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 299,
+        "context_text": "of advanced composites across the globe. There is an increasing demand for carbon fiber composites in the aerospace & defense, sporting goods,"
+      },
+      {
+        "activation": 21.328125,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 177,
+        "context_text": "opportunity for people who want to get their foot in the door for the fashion industry. There is a lot of opportunities to move"
+      },
+      {
+        "activation": 21.328125,
+        "token_id": 115948,
+        "token_text": "splendor",
+        "position": 4136,
+        "context_text": "of god-head as the hymn says, he is most splendorous. Thus the supreme abode of Brahman (Ved-Pur"
+      },
+      {
+        "activation": 21.296875,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 1462,
+        "context_text": "Karl Dorozenko, Development, Planning and Regeneration Manager for East Ayrshire. He told us about a decidedly different approach"
+      },
+      {
+        "activation": 21.234375,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 809,
+        "context_text": "for Donnie Brasco, and the group\u2019s first foray into film scoring saw them helm 1995\u2019s"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9069209145640997,
+    "probe_b_auc_filtered": 0.9277324580447083,
+    "probe_c_auc_filtered": 0.9071234828053047,
+    "probe_a_auc_unfiltered": 0.9069209145640997,
+    "probe_b_auc_unfiltered": 0.9277324580447083,
+    "probe_c_auc_unfiltered": 0.9071234828053047,
+    "train_positive_fraction_unfiltered": 0.36209872353192496,
+    "test_positive_fraction_unfiltered": 0.3625704898823281,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 1747592,
+    "balanced_train_size_unfiltered": 1747592,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 112,
+    "feature_name": "Feature 112",
+    "max_activation": 27.3125,
+    "threshold": 2.73125,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.3667777180671692,
+    "train_activation_std": 1.2667691707611084,
+    "train_activation_p95": 3.33984375,
+    "train_activation_p99": 6.21484375,
+    "test_activation_mean": 0.36145833134651184,
+    "test_activation_std": 1.2581487894058228,
+    "test_activation_p95": 3.3046875,
+    "test_activation_p99": 6.20703125,
+    "train_positive_count_filtered": 163158,
+    "test_positive_count_filtered": 39041,
+    "train_positive_fraction_filtered": 0.06761223847902921,
+    "test_positive_fraction_filtered": 0.06649339766768118,
+    "activating_examples": [
+      {
+        "activation": 27.3125,
+        "token_id": 39209,
+        "token_text": "Needs",
+        "position": 25,
+        "context_text": "Votes: 0 0.0%\n  \u2022 Needs editing or more information\n\n    Votes: 0 0"
+      },
+      {
+        "activation": 25.890625,
+        "token_id": 55504,
+        "token_text": "deferred",
+        "position": 2517,
+        "context_text": "no\". If the opponents see the bet, the scoring is deferred to the showdown at the end of the hand. Raising is"
+      },
+      {
+        "activation": 25.328125,
+        "token_id": 1706,
+        "token_text": "down",
+        "position": 973,
+        "context_text": ".\n\nSo whether or not North Korea will invade, is down to the mind of Kim Jong-Un.\n\nOne Comment"
+      },
+      {
+        "activation": 25.234375,
+        "token_id": 5504,
+        "token_text": "reported",
+        "position": 691,
+        "context_text": "5 s.; 1 of Quakers, the s. not reported; and 7 of Wesleyans, with 57"
+      },
+      {
+        "activation": 24.34375,
+        "token_id": 5091,
+        "token_text": "subject",
+        "position": 1168,
+        "context_text": "0 to the Great Recession. After that, it\u2019s subject to debate.\n\nHow these graphs were created: For the"
+      },
+      {
+        "activation": 20.96875,
+        "token_id": 65013,
+        "token_text": "Silent",
+        "position": 403,
+        "context_text": "corporations. 15%.\nTAXATION AND BUDGET: Silent on borrowing. Lower taxes for all, especially lower corporate taxes"
+      },
+      {
+        "activation": 20.8125,
+        "token_id": 2250,
+        "token_text": "How",
+        "position": 771,
+        "context_text": "MAUREEN: Salsa or guacamole?\nANGELA: How can you have one without the other?\nMAUREEN"
+      },
+      {
+        "activation": 20.75,
+        "token_id": 861,
+        "token_text": "your",
+        "position": 249,
+        "context_text": "the result was 6 \u2013 13 mg /dl your baby either could still have galactosemia or a harmless"
+      },
+      {
+        "activation": 20.484375,
+        "token_id": 59473,
+        "token_text": "Automatic",
+        "position": 3707,
+        "context_text": "lectic partitioned RungeKutta method\n\"DifferenceOrder\"Automaticspecify the order of local accuracy of the method\n\"Position"
+      },
+      {
+        "activation": 20.421875,
+        "token_id": 665,
+        "token_text": "it",
+        "position": 184,
+        "context_text": "23 percent said Romney won with 24 percent saying it was a tie. The poll has a 4 percent margin"
+      },
+      {
+        "activation": 20.15625,
+        "token_id": 16819,
+        "token_text": "detection",
+        "position": 147,
+        "context_text": "mat_queue_mode 2 (default -1 automatic detection 2 Force uses multi-threaded mode)\ncl_"
+      },
+      {
+        "activation": 19.1875,
+        "token_id": 3110,
+        "token_text": "clear",
+        "position": 576,
+        "context_text": "not UChicago was giving me what I needed was far from clear-cut\u2014and I can imagine that\u2019s the case"
+      },
+      {
+        "activation": 18.75,
+        "token_id": 1280,
+        "token_text": "into",
+        "position": 844,
+        "context_text": "even footing on the second map Inferno, as the game went into double overtime, with multiple chances for mousesports to win"
+      },
+      {
+        "activation": 18.671875,
+        "token_id": 3448,
+        "token_text": "answer",
+        "position": 704,
+        "context_text": "have I been unconscious?\u201d I asked. He didn\u2019t answer.\n\u201cWhat year is it?\u201d he asked. A"
+      },
+      {
+        "activation": 18.453125,
+        "token_id": 235265,
+        "token_text": ".",
+        "position": 240,
+        "context_text": "explicitly says you can't, nor explicitly that you can. An inspector could reject it based solely on it preventing the fixture"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8924492804992394,
+    "probe_b_auc_filtered": 0.9170805035211065,
+    "probe_c_auc_filtered": 0.8917670380869767,
+    "probe_a_auc_unfiltered": 0.8924492804992394,
+    "probe_b_auc_unfiltered": 0.9170805035211065,
+    "probe_c_auc_unfiltered": 0.8917670380869767,
+    "train_positive_fraction_unfiltered": 0.06761223847902921,
+    "test_positive_fraction_unfiltered": 0.06649339766768118,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 326316,
+    "balanced_train_size_unfiltered": 326316,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 113,
+    "feature_name": "Feature 113",
+    "max_activation": 26.171875,
+    "threshold": 2.6171875,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.7982794046401978,
+    "train_activation_std": 2.2065200805664062,
+    "train_activation_p95": 5.9140625,
+    "train_activation_p99": 10.328125,
+    "test_activation_mean": 0.8072091341018677,
+    "test_activation_std": 2.217747211456299,
+    "test_activation_p95": 5.984375,
+    "test_activation_p99": 10.359375,
+    "train_positive_count_filtered": 308500,
+    "test_positive_count_filtered": 75742,
+    "train_positive_fraction_filtered": 0.12784157424570364,
+    "test_positive_fraction_filtered": 0.1290013812695758,
+    "activating_examples": [
+      {
+        "activation": 26.171875,
+        "token_id": 3646,
+        "token_text": "today",
+        "position": 45,
+        "context_text": "India\u2019s quest to be the IT superpower, and has today turned into a forceful and dynamic event that sets the pace for"
+      },
+      {
+        "activation": 25.9375,
+        "token_id": 4281,
+        "token_text": "history",
+        "position": 155,
+        "context_text": "languages of the European Union.\nnashville america american women history dating\nThe code is open source, and available in this"
+      },
+      {
+        "activation": 24.921875,
+        "token_id": 3213,
+        "token_text": "shall",
+        "position": 43,
+        "context_text": "No Meeting\nWhat does the Planning Commission do?\nIt shall be the function and duty of the planning commission to make and"
+      },
+      {
+        "activation": 24.8125,
+        "token_id": 11588,
+        "token_text": "administration",
+        "position": 3574,
+        "context_text": "a series of disengagement accords that ultimately, under the Carter administration, led to the Camp David agreement and the Egyptian-Israeli"
+      },
+      {
+        "activation": 24.75,
+        "token_id": 12809,
+        "token_text": "installation",
+        "position": 1031,
+        "context_text": "linus root]# apt-get install hello\n[snip installation]\n\n[root at linus root]# time hello"
+      },
+      {
+        "activation": 24.640625,
+        "token_id": 3505,
+        "token_text": "development",
+        "position": 40,
+        "context_text": "and the private sector to advocate and mobilize resources to achieve sustainable development. UNFPA is fully committed to a more effective, coherent"
+      },
+      {
+        "activation": 24.625,
+        "token_id": 4281,
+        "token_text": "history",
+        "position": 498,
+        "context_text": "by the hands of another, but they speak still from our history. Church life and history can be complicated.\nIf the"
+      },
+      {
+        "activation": 24.390625,
+        "token_id": 5361,
+        "token_text": "industry",
+        "position": 642,
+        "context_text": "leads to trends and labels, and is often exploited by commercial industry. It seems that in order to stand out you must spend"
+      },
+      {
+        "activation": 24.234375,
+        "token_id": 9245,
+        "token_text": "investment",
+        "position": 336,
+        "context_text": "0% of total smart phones in the US and with this investment, it seems that Google will be back in the market soon"
+      },
+      {
+        "activation": 24.203125,
+        "token_id": 4281,
+        "token_text": "history",
+        "position": 322,
+        "context_text": "location for short-term renters. This area is rich with history, music and art. In addition, Digit 19"
+      },
+      {
+        "activation": 24.015625,
+        "token_id": 5361,
+        "token_text": "industry",
+        "position": 436,
+        "context_text": "politicians who tried their fortune in sugarcane industries the history of sugarcane industry in Maharashtra is synonymous to the history of many of the western"
+      },
+      {
+        "activation": 23.84375,
+        "token_id": 5115,
+        "token_text": "growth",
+        "position": 559,
+        "context_text": "company income that would have been put into other use to promote growth of the enterprise. You can click this link http://www"
+      },
+      {
+        "activation": 23.78125,
+        "token_id": 4281,
+        "token_text": "history",
+        "position": 930,
+        "context_text": ". His work has been praised for its detailed survey of Islamic history and its many rulers and leaders as well as for the global"
+      },
+      {
+        "activation": 23.6875,
+        "token_id": 5361,
+        "token_text": "industry",
+        "position": 180,
+        "context_text": "not surprising that this very element is where the martial arts education industry is at its weakest. I see teaching children as a path"
+      },
+      {
+        "activation": 23.671875,
+        "token_id": 5361,
+        "token_text": "industry",
+        "position": 583,
+        "context_text": "that sources beer, wine and spirits. The company blends extensive industry expertise with cutting-edge business practices resulting in a dynamic,"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9330465292265867,
+    "probe_b_auc_filtered": 0.9493028330654043,
+    "probe_c_auc_filtered": 0.9318173459469998,
+    "probe_a_auc_unfiltered": 0.9330465292265867,
+    "probe_b_auc_unfiltered": 0.9493028330654043,
+    "probe_c_auc_unfiltered": 0.9318173459469998,
+    "train_positive_fraction_unfiltered": 0.12784157424570364,
+    "test_positive_fraction_unfiltered": 0.1290013812695758,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 617000,
+    "balanced_train_size_unfiltered": 617000,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 114,
+    "feature_name": "Feature 114",
+    "max_activation": 20.015625,
+    "threshold": 2.0015625,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.5595864057540894,
+    "train_activation_std": 1.6475584506988525,
+    "train_activation_p95": 4.46875,
+    "train_activation_p99": 7.65625,
+    "test_activation_mean": 0.5676590204238892,
+    "test_activation_std": 1.6554769277572632,
+    "test_activation_p95": 4.49609375,
+    "test_activation_p99": 7.65625,
+    "train_positive_count_filtered": 301912,
+    "test_positive_count_filtered": 74728,
+    "train_positive_fraction_filtered": 0.1251115246796398,
+    "test_positive_fraction_filtered": 0.12727436850773494,
+    "activating_examples": [
+      {
+        "activation": 20.015625,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 2280,
+        "context_text": "Mafia aka PSD&friends?\n\n\n  2. Thank You for this amazing article. It is the best synopsis of Romanian history"
+      },
+      {
+        "activation": 20.015625,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 142,
+        "context_text": "when inspiration strikes, obviously that's today:-)\nThanks for leaving a comment; it makes my day!!"
+      },
+      {
+        "activation": 19.953125,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 419,
+        "context_text": "cities. The place to find cheap & affordable collectibles. Known for shopping, one can find good products here. One way to"
+      },
+      {
+        "activation": 19.859375,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 584,
+        "context_text": "a heartfelt thank you!\n\n\nAnonymous said...\n\nThank you for sharing the outside view! It helps understand the setup much easier"
+      },
+      {
+        "activation": 19.796875,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 3,
+        "context_text": "<bos>Thank you for visiting our website. We want to give you an idea of"
+      },
+      {
+        "activation": 19.671875,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 614,
+        "context_text": "L!!! SLS55 :)\n\nAnonymous said...\n\nThanks for all you do for these precious owls.\nAddicted to"
+      },
+      {
+        "activation": 19.3125,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 1145,
+        "context_text": "-06-16\n\nCool project, thank you for sharing!\n\nAbout This Instructable\n\n\n\nMore by Yoiny"
+      },
+      {
+        "activation": 19.3125,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 151,
+        "context_text": ",\u201d \u201cAquirre, the Wrath of God\u201d) is known for his belief in the voodoo of locations, but this time seems"
+      },
+      {
+        "activation": 19.296875,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 2674,
+        "context_text": "12. Hi Docs,\n\n    Thank you for a great podcast!\n    Dr. Johnson advised against fruit"
+      },
+      {
+        "activation": 19.265625,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 39,
+        "context_text": "and returned the best results from their labs. We thank them for their excellent efforts and are proud to add these to our available"
+      },
+      {
+        "activation": 19.21875,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 148,
+        "context_text": "resort where nothing is rushed. Residents of this region are known for their genuine smile and hospitality and guests are requested to respect their"
+      },
+      {
+        "activation": 19.125,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 37,
+        "context_text": "Adams\nHillari. . .oooof!!!\nThanks for the thoughts Doc, I mean come on it had Keanu"
+      },
+      {
+        "activation": 19.09375,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 1128,
+        "context_text": "\u2019s most painful challenges \u2013 user retention.\n    Thanks for sharing such an informational article.\n\n\nPlease enter your comment!"
+      },
+      {
+        "activation": 19.046875,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 1175,
+        "context_text": "is an herb member of the mint family. Rosemary is known for its medicinal properties and it is used to boost the immune system"
+      },
+      {
+        "activation": 18.984375,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 1352,
+        "context_text": "Thank you. Love your work.\n\n  3. Thanks for the fructose story. This stuff is so complicated but i think"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9040496795200611,
+    "probe_b_auc_filtered": 0.9248805701809388,
+    "probe_c_auc_filtered": 0.9052286382362048,
+    "probe_a_auc_unfiltered": 0.9040496795200611,
+    "probe_b_auc_unfiltered": 0.9248805701809388,
+    "probe_c_auc_unfiltered": 0.9052286382362048,
+    "train_positive_fraction_unfiltered": 0.1251115246796398,
+    "test_positive_fraction_unfiltered": 0.12727436850773494,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 603824,
+    "balanced_train_size_unfiltered": 603824,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 115,
+    "feature_name": "Feature 115",
+    "max_activation": 16.78125,
+    "threshold": 1.678125,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.36673980951309204,
+    "train_activation_std": 1.3142876625061035,
+    "train_activation_p95": 3.40625,
+    "train_activation_p99": 6.64453125,
+    "test_activation_mean": 0.36969324946403503,
+    "test_activation_std": 1.3189318180084229,
+    "test_activation_p95": 3.4140625,
+    "test_activation_p99": 6.66015625,
+    "train_positive_count_filtered": 208845,
+    "test_positive_count_filtered": 51260,
+    "train_positive_fraction_filtered": 0.08654480898976977,
+    "test_positive_fraction_filtered": 0.08730441239838471,
+    "activating_examples": [
+      {
+        "activation": 16.78125,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 1477,
+        "context_text": "011.But to be fair, the Islamic State would not exist in the first place if the U.S."
+      },
+      {
+        "activation": 16.5625,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 31,
+        "context_text": "was started in 2002 as a forum that would demonstrate India\u2019s quest to be the IT superpower, and"
+      },
+      {
+        "activation": 16.0625,
+        "token_id": 6843,
+        "token_text": "relationship",
+        "position": 4,
+        "context_text": "<bos>What makes client relationship effective in Development Advisory Team project? How to teach an engaging"
+      },
+      {
+        "activation": 15.90625,
+        "token_id": 69856,
+        "token_text": "Wedding",
+        "position": 1,
+        "context_text": "<bos>Wedding is something that is rewarding, exciting, and fulfilling experience."
+      },
+      {
+        "activation": 15.890625,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 317,
+        "context_text": "studied the policy of prohibition and the War on Drugs, it would be a mistake to believe they have provided a unified analysis or"
+      },
+      {
+        "activation": 15.65625,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 17,
+        "context_text": "May 2013\nThis was the day that would be the beginning of our two month long nightmare dealing with Ad"
+      },
+      {
+        "activation": 15.65625,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 2326,
+        "context_text": "knew what information you needed to solve a problem, then it would be fine to wait and look it up at that time;"
+      },
+      {
+        "activation": 15.625,
+        "token_id": 11999,
+        "token_text": "DNA",
+        "position": 219,
+        "context_text": "DNA as Code\nAs it exists in all our cells, DNA is a string of four different subunits linked together chemically. Cellular"
+      },
+      {
+        "activation": 15.59375,
+        "token_id": 3505,
+        "token_text": "development",
+        "position": 50,
+        "context_text": "10 September 2009\n\nMySQL Cluster development\n\n\n\n\nNdb was originally designed for :\n  \u2022 Transaction"
+      },
+      {
+        "activation": 15.546875,
+        "token_id": 2447,
+        "token_text": "never",
+        "position": 34,
+        "context_text": ", Sr.(pictured above). Without him, this search would never have begun.\nHerbert William Donahue, born December 7"
+      },
+      {
+        "activation": 15.546875,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 600,
+        "context_text": "monster because of a slight resemblance to Karloff, but it would be his only appearance in a Universal horror film as the studio"
+      },
+      {
+        "activation": 15.515625,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 803,
+        "context_text": "permanent capital in the South, on the Potomac River in what would become Washington, D.C.\n\nThe good credit established"
+      },
+      {
+        "activation": 15.5,
+        "token_id": 23807,
+        "token_text": "DNA",
+        "position": 207,
+        "context_text": "genetic code. But what exactly is the genetic code?\nDNA as Code\nAs it exists in all our cells, DNA"
+      },
+      {
+        "activation": 15.328125,
+        "token_id": 112435,
+        "token_text": "Stephenson",
+        "position": 147,
+        "context_text": "were important in the evolution of the communications industry.\nRandall Stephenson, AT&T\u2019s chief executive explained during a media"
+      },
+      {
+        "activation": 15.15625,
+        "token_id": 1134,
+        "token_text": "would",
+        "position": 59,
+        "context_text": "occupies a central position in archaeology. Without the artifact, archaeology would be rendered blind groping in the vast darkness of human pre"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9212362948519845,
+    "probe_b_auc_filtered": 0.9467510181451899,
+    "probe_c_auc_filtered": 0.9214545867530733,
+    "probe_a_auc_unfiltered": 0.9212362948519845,
+    "probe_b_auc_unfiltered": 0.9467510181451899,
+    "probe_c_auc_unfiltered": 0.9214545867530733,
+    "train_positive_fraction_unfiltered": 0.08654480898976977,
+    "test_positive_fraction_unfiltered": 0.08730441239838471,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 417690,
+    "balanced_train_size_unfiltered": 417690,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 116,
+    "feature_name": "Feature 116",
+    "max_activation": 25.4375,
+    "threshold": 2.54375,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.1714809536933899,
+    "train_activation_std": 0.8271170854568481,
+    "train_activation_p95": 0.0,
+    "train_activation_p99": 4.51171875,
+    "test_activation_mean": 0.16835170984268188,
+    "test_activation_std": 0.8191340565681458,
+    "test_activation_p95": 0.0,
+    "test_activation_p99": 4.4765625,
+    "train_positive_count_filtered": 87529,
+    "test_positive_count_filtered": 20855,
+    "train_positive_fraction_filtered": 0.03627178331329722,
+    "test_positive_fraction_filtered": 0.035519577069221875,
+    "activating_examples": [
+      {
+        "activation": 25.4375,
+        "token_id": 1370,
+        "token_text": "first",
+        "position": 505,
+        "context_text": "the current through the resistor is initially zero it increases linearly at first : $$\\frac{dI}{dt}|_0"
+      },
+      {
+        "activation": 22.515625,
+        "token_id": 235248,
+        "token_text": "",
+        "position": 3335,
+        "context_text": "$P$). Note that a circle is already determined by any 3 distinct points on its boundary. Anyhow, that will"
+      },
+      {
+        "activation": 21.09375,
+        "token_id": 30669,
+        "token_text": "degree",
+        "position": 211,
+        "context_text": "Hamiltonian Systems\n\nConsider a differential equation\n\nA -degree of freedom Hamiltonian system is a particular instance of (1)"
+      },
+      {
+        "activation": 19.515625,
+        "token_id": 33635,
+        "token_text": "derivative",
+        "position": 3509,
+        "context_text": "that the starting step size routine is based on low-order derivative estimation and this may not be ideal for selecting high-order"
+      },
+      {
+        "activation": 17.734375,
+        "token_id": 2184,
+        "token_text": "order",
+        "position": 944,
+        "context_text": "Consider the previous example where the combination of step size and order of the method is now chosen such that the error in the"
+      },
+      {
+        "activation": 17.40625,
+        "token_id": 6871,
+        "token_text": "equal",
+        "position": 1178,
+        "context_text": "hand with the higher first card wins, or if these are equal the hand with the higher second card, or if these are"
+      },
+      {
+        "activation": 16.0,
+        "token_id": 791,
+        "token_text": "have",
+        "position": 157,
+        "context_text": "?\n\nAt $x \\to 0$ we should have $ y_x \\to cx$ for some constant $"
+      },
+      {
+        "activation": 15.640625,
+        "token_id": 3890,
+        "token_text": "simple",
+        "position": 1663,
+        "context_text": "of dilations.\nFurthermore, $t'$ only has simple zeroes because iterating $f$ on $0$ will"
+      },
+      {
+        "activation": 15.421875,
+        "token_id": 3476,
+        "token_text": "least",
+        "position": 403,
+        "context_text": "divisor; discard others. Typically, you'd retain at least two significant figures, ensuring accuracy up to a certain degree."
+      },
+      {
+        "activation": 15.171875,
+        "token_id": 9720,
+        "token_text": "dam",
+        "position": 73,
+        "context_text": "up with a major event that fits the quatrain. Nostradamus\u2019 style is so ambiguous you can make them fit almost"
+      },
+      {
+        "activation": 14.203125,
+        "token_id": 2257,
+        "token_text": "second",
+        "position": 1184,
+        "context_text": "wins, or if these are equal the hand with the higher second card, or if these are equal too, the higher third"
+      },
+      {
+        "activation": 14.203125,
+        "token_id": 2184,
+        "token_text": "order",
+        "position": 82,
+        "context_text": "#### Abstract\n\nIn this paper, we have achieved high order solution of a three dimensional nonlinear diffusive-convective"
+      },
+      {
+        "activation": 14.1875,
+        "token_id": 2308,
+        "token_text": "order",
+        "position": 2894,
+        "context_text": "vectors should sum to unity so that they yield a consistent (order 1) method.\n\n\nSelect the perturbed Kepler problem."
+      },
+      {
+        "activation": 14.125,
+        "token_id": 9720,
+        "token_text": "dam",
+        "position": 212,
+        "context_text": "2023\n\n\nThe following quatrains of Nostradamus arithmetically predict the End-of-the-"
+      },
+      {
+        "activation": 13.90625,
+        "token_id": 235284,
+        "token_text": "2",
+        "position": 396,
+        "context_text": "x[2] c1y[2]\nc2x[2] c2y[2]\nex"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9064755350528942,
+    "probe_b_auc_filtered": 0.9297040133261885,
+    "probe_c_auc_filtered": 0.9067546701875585,
+    "probe_a_auc_unfiltered": 0.9064755350528942,
+    "probe_b_auc_unfiltered": 0.9297040133261885,
+    "probe_c_auc_unfiltered": 0.9067546701875585,
+    "train_positive_fraction_unfiltered": 0.03627178331329722,
+    "test_positive_fraction_unfiltered": 0.035519577069221875,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 175058,
+    "balanced_train_size_unfiltered": 175058,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 117,
+    "feature_name": "Feature 117",
+    "max_activation": 22.8125,
+    "threshold": 2.28125,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 1.1237025260925293,
+    "train_activation_std": 2.3937630653381348,
+    "train_activation_p95": 6.7421875,
+    "train_activation_p99": 9.9296875,
+    "test_activation_mean": 1.1513755321502686,
+    "test_activation_std": 2.414803981781006,
+    "test_activation_p95": 6.8046875,
+    "test_activation_p99": 9.96875,
+    "train_positive_count_filtered": 501797,
+    "test_positive_count_filtered": 125206,
+    "train_positive_fraction_filtered": 0.20794333365241927,
+    "test_positive_fraction_filtered": 0.2132469032140491,
+    "activating_examples": [
+      {
+        "activation": 22.8125,
+        "token_id": 68313,
+        "token_text": "adhesion",
+        "position": 662,
+        "context_text": "as TNF, and up-regulate cell surface molecules including adhesion molecules.This clone is cross reactive with non-human primate"
+      },
+      {
+        "activation": 22.796875,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 3571,
+        "context_text": "happened before to the Eldar would happen again.\n\nMore than forty standard years in the future, mere days after something humanity"
+      },
+      {
+        "activation": 22.625,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 246,
+        "context_text": "churches of the Wichi tribes of Northern Argentina.\nMore than anything though, I am trying to take the time to adapt"
+      },
+      {
+        "activation": 21.984375,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 28,
+        "context_text": "have received loud and clear.\nLanguage Is Power\nMore than anything else, words have the ability to change lives for better"
+      },
+      {
+        "activation": 21.640625,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 110,
+        "context_text": "boundaries between precision and vagueness start to diminish. More than the theme and the reality behind it, it is the artist"
+      },
+      {
+        "activation": 21.359375,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 3,
+        "context_text": "<bos>\n\n\n\n\n\n\n\n\n\n\nMore than479\u00a0469\u00a0registered clients\n\n\n\nN"
+      },
+      {
+        "activation": 21.1875,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 1813,
+        "context_text": "world was going to end in a couple of years. More than likely, the reason why he didn't write anything down"
+      },
+      {
+        "activation": 21.125,
+        "token_id": 65694,
+        "token_text": "Increasing",
+        "position": 287,
+        "context_text": "vertically within a single column to provide more space for titles. Increasing this value will result in more columns within a date."
+      },
+      {
+        "activation": 21.078125,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 301,
+        "context_text": "of any gold specimen requires a special fire assay determination. More than 20% silver content is technically named Electrum."
+      },
+      {
+        "activation": 20.984375,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 685,
+        "context_text": "there are now 12 billion, I repeat, more than 12 billion silver dimes and quarters and half dollars"
+      },
+      {
+        "activation": 20.984375,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 346,
+        "context_text": "at the same time in its own way. Overall, more than 150 women and men were accused throughout Salem and"
+      },
+      {
+        "activation": 20.9375,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 131,
+        "context_text": ", but fueled by the debauchery of ours. More than shaming themselves, they risk the common ability for survival as these"
+      },
+      {
+        "activation": 20.921875,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 908,
+        "context_text": "Authentic Unconditional Love, From the Inside Out\nMore than just the action of purchasing the items and gifting it to myself"
+      },
+      {
+        "activation": 20.78125,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 119,
+        "context_text": "gym bros carrying around gallon jugs drinking a colorful beverage. More than likely what you\u2019re seeing is three to six scoops of"
+      },
+      {
+        "activation": 20.765625,
+        "token_id": 1178,
+        "token_text": "than",
+        "position": 48,
+        "context_text": "staple and we go through a LOT of this stuff. More than I care to admit because just 2 tablespoons contain about"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.920210070720119,
+    "probe_b_auc_filtered": 0.939530089525627,
+    "probe_c_auc_filtered": 0.9199989005106931,
+    "probe_a_auc_unfiltered": 0.920210070720119,
+    "probe_b_auc_unfiltered": 0.939530089525627,
+    "probe_c_auc_unfiltered": 0.9199989005106931,
+    "train_positive_fraction_unfiltered": 0.20794333365241927,
+    "test_positive_fraction_unfiltered": 0.2132469032140491,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 1003594,
+    "balanced_train_size_unfiltered": 1003594,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 118,
+    "feature_name": "Feature 118",
+    "max_activation": 20.265625,
+    "threshold": 2.0265625000000003,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.1521298885345459,
+    "train_activation_std": 0.7211427092552185,
+    "train_activation_p95": 0.0,
+    "train_activation_p99": 3.90625,
+    "test_activation_mean": 0.14142462611198425,
+    "test_activation_std": 0.6956911683082581,
+    "test_activation_p95": 0.0,
+    "test_activation_p99": 3.81640625,
+    "train_positive_count_filtered": 113924,
+    "test_positive_count_filtered": 25799,
+    "train_positive_fraction_filtered": 0.04720980066245556,
+    "test_positive_fraction_filtered": 0.04394004165949917,
+    "activating_examples": [
+      {
+        "activation": 20.265625,
+        "token_id": 614,
+        "token_text": "be",
+        "position": 911,
+        "context_text": "and water should be changed daily. Any uneaten food should be thrown away.\n\n\nDo I need to clean my hamster?"
+      },
+      {
+        "activation": 20.25,
+        "token_id": 2960,
+        "token_text": "food",
+        "position": 909,
+        "context_text": "Food and water should be changed daily. Any uneaten food should be thrown away.\n\n\nDo I need to clean my"
+      },
+      {
+        "activation": 17.4375,
+        "token_id": 2360,
+        "token_text": "une",
+        "position": 907,
+        "context_text": "hamster?\nFood and water should be changed daily. Any uneaten food should be thrown away.\n\n\nDo I need to"
+      },
+      {
+        "activation": 17.328125,
+        "token_id": 6124,
+        "token_text": "aten",
+        "position": 908,
+        "context_text": "?\nFood and water should be changed daily. Any uneaten food should be thrown away.\n\n\nDo I need to clean"
+      },
+      {
+        "activation": 14.8359375,
+        "token_id": 614,
+        "token_text": "be",
+        "position": 902,
+        "context_text": "I feed and water my hamster?\nFood and water should be changed daily. Any uneaten food should be thrown away."
+      },
+      {
+        "activation": 14.59375,
+        "token_id": 235248,
+        "token_text": "",
+        "position": 45,
+        "context_text": "Given the following matrix:\n\n[\n [ 1, 2, 3 ],\n [ 4, 5"
+      },
+      {
+        "activation": 14.46875,
+        "token_id": 3024,
+        "token_text": "away",
+        "position": 913,
+        "context_text": "should be changed daily. Any uneaten food should be thrown away.\n\n\nDo I need to clean my hamster?\nHam"
+      },
+      {
+        "activation": 14.421875,
+        "token_id": 5822,
+        "token_text": "remain",
+        "position": 279,
+        "context_text": "of water applied and soil type. Do not let granular fertilizers remain on hosta leaves as they can burn small holes in the"
+      },
+      {
+        "activation": 14.0859375,
+        "token_id": 235248,
+        "token_text": "",
+        "position": 162,
+        "context_text": "k = len(matrix), len(matrix[0]), 0\n        ret = []\n        while True:"
+      },
+      {
+        "activation": 11.875,
+        "token_id": 2960,
+        "token_text": "food",
+        "position": 4852,
+        "context_text": "and moisture of 65%-70%. Water and food were available for Clofarabine distributor 15 min"
+      },
+      {
+        "activation": 11.84375,
+        "token_id": 604,
+        "token_text": "for",
+        "position": 4855,
+        "context_text": "65%-70%. Water and food were available for Clofarabine distributor 15 min at 4"
+      },
+      {
+        "activation": 11.7734375,
+        "token_id": 2506,
+        "token_text": "available",
+        "position": 4854,
+        "context_text": "of 65%-70%. Water and food were available for Clofarabine distributor 15 min at"
+      },
+      {
+        "activation": 11.515625,
+        "token_id": 611,
+        "token_text": "on",
+        "position": 280,
+        "context_text": "water applied and soil type. Do not let granular fertilizers remain on hosta leaves as they can burn small holes in the leaves"
+      },
+      {
+        "activation": 11.359375,
+        "token_id": 1492,
+        "token_text": "then",
+        "position": 24,
+        "context_text": "Do you often find yourself eating more food than you intended, then berating and criticizing yourself for doing so, especially when looking"
+      },
+      {
+        "activation": 11.2734375,
+        "token_id": 576,
+        "token_text": "of",
+        "position": 538,
+        "context_text": "of 27, and has won England\u2019s Player of the Year Award on two occasions. Without doubt Rooney has more"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8766227550904926,
+    "probe_b_auc_filtered": 0.8969417897871877,
+    "probe_c_auc_filtered": 0.8771817294172,
+    "probe_a_auc_unfiltered": 0.8766227550904926,
+    "probe_b_auc_unfiltered": 0.8969417897871877,
+    "probe_c_auc_unfiltered": 0.8771817294172,
+    "train_positive_fraction_unfiltered": 0.04720980066245556,
+    "test_positive_fraction_unfiltered": 0.04394004165949917,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 227848,
+    "balanced_train_size_unfiltered": 227848,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 119,
+    "feature_name": "Feature 119",
+    "max_activation": 34.15625,
+    "threshold": 3.4156250000000004,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 1.192615032196045,
+    "train_activation_std": 2.8544511795043945,
+    "train_activation_p95": 7.703125,
+    "train_activation_p99": 12.9296875,
+    "test_activation_mean": 1.2185848951339722,
+    "test_activation_std": 2.881988048553467,
+    "test_activation_p95": 7.8046875,
+    "test_activation_p99": 13.0234375,
+    "train_positive_count_filtered": 352949,
+    "test_positive_count_filtered": 87666,
+    "train_positive_fraction_filtered": 0.14626112087016807,
+    "test_positive_fraction_filtered": 0.14930996132104554,
+    "activating_examples": [
+      {
+        "activation": 34.15625,
+        "token_id": 169552,
+        "token_text": "MGM",
+        "position": 951,
+        "context_text": "Benton Reid\nNicholas Nayfack for Goldwyn Mayer (MGM)\nFranck Fenton, Phillip Rock, Michael Pate"
+      },
+      {
+        "activation": 33.375,
+        "token_id": 39375,
+        "token_text": "Manhattan",
+        "position": 325,
+        "context_text": ".95), a compendium of his favorite food places in Manhattan, the Bronx, Brooklyn and Queens. Mr. Levine pays"
+      },
+      {
+        "activation": 32.15625,
+        "token_id": 167292,
+        "token_text": "Springfield",
+        "position": 1,
+        "context_text": "<bos>Springfield Paranormal Research Group\nmy Guest Book Here!\nTo"
+      },
+      {
+        "activation": 31.78125,
+        "token_id": 39375,
+        "token_text": "Manhattan",
+        "position": 847,
+        "context_text": "said. \"The Zagat survey on food sources concentrates on Manhattan and doesn't give you the details.\"\nUnlike Ms"
+      },
+      {
+        "activation": 31.6875,
+        "token_id": 58943,
+        "token_text": "plantation",
+        "position": 2940,
+        "context_text": "encountered after dark. By comparing diurnal and nocturnal landscapes of the plantation, it is possible to think about space and place making in"
+      },
+      {
+        "activation": 31.5625,
+        "token_id": 91410,
+        "token_text": "Manhattan",
+        "position": 487,
+        "context_text": "first informed through official channels by Harry Truman of the infamous\u00a0Manhattan Project\u00a0at the Potsdam Conference on July 24,"
+      },
+      {
+        "activation": 31.25,
+        "token_id": 60533,
+        "token_text": "Morton",
+        "position": 6,
+        "context_text": "<bos>Ball of foot pain - Morton's Neuroma\n\nBall of foot pain or Morton'"
+      },
+      {
+        "activation": 31.125,
+        "token_id": 1166,
+        "token_text": "ton",
+        "position": 143,
+        "context_text": "great whore, she loves dirt and eroticism. naughtyneyton log Your MILF from a mother helps you today as your"
+      },
+      {
+        "activation": 30.8125,
+        "token_id": 13940,
+        "token_text": "ocean",
+        "position": 119,
+        "context_text": ", Britain and her allies had too few naval escort ships for ocean convoy work.\u00a0\u00a0 They also had too few long-range"
+      },
+      {
+        "activation": 30.78125,
+        "token_id": 27245,
+        "token_text": "Mason",
+        "position": 64,
+        "context_text": "ley is an assistant professor in the Biodefense Program at George Mason University (GMU), Department of Public and...\n\n\nIn"
+      },
+      {
+        "activation": 30.625,
+        "token_id": 39928,
+        "token_text": "gestion",
+        "position": 79,
+        "context_text": "PHPdoc)\n\t * @see classes/com/gestion/action/entities/EditEntityInitAction::getNewForm"
+      },
+      {
+        "activation": 30.40625,
+        "token_id": 90372,
+        "token_text": "tendon",
+        "position": 278,
+        "context_text": "been due to a build-up of recurring low-grade tendon fibre troubles.\u201d Here Gil explains the main causes of tendon damage"
+      },
+      {
+        "activation": 30.375,
+        "token_id": 57719,
+        "token_text": "Patterson",
+        "position": 222,
+        "context_text": "this fund.\nYours very truly\nF. D. Patterson\nj: This letter was typed by a student"
+      },
+      {
+        "activation": 30.34375,
+        "token_id": 13198,
+        "token_text": "Spring",
+        "position": 1,
+        "context_text": "<bos>Spring into Exercise!\n\n\nAs I sit here, back aching and"
+      },
+      {
+        "activation": 30.09375,
+        "token_id": 39375,
+        "token_text": "Manhattan",
+        "position": 430,
+        "context_text": "tacit knowledge. Science and technology scholars have demonstrated that it took Manhattan Project scientists with explicit knowledge of physics and possession of fissile"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.9217281491446976,
+    "probe_b_auc_filtered": 0.943121100644829,
+    "probe_c_auc_filtered": 0.9216204663015164,
+    "probe_a_auc_unfiltered": 0.9217281491446976,
+    "probe_b_auc_unfiltered": 0.943121100644829,
+    "probe_c_auc_unfiltered": 0.9216204663015164,
+    "train_positive_fraction_unfiltered": 0.14626112087016807,
+    "test_positive_fraction_unfiltered": 0.14930996132104554,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 705898,
+    "balanced_train_size_unfiltered": 705898,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  },
+  {
+    "run_label": "gemma2_9b_layer20_width16k_l0_108",
+    "sae_release": "gemma-scope-9b-pt-mlp",
+    "sae_id": "layer_20/width_16k/average_l0_108",
+    "feature_id": 120,
+    "feature_name": "Feature 120",
+    "max_activation": 15.359375,
+    "threshold": 1.5359375000000002,
+    "threshold_strategy": "dynamic_0.1_max",
+    "train_token_count_filtered": 2413143,
+    "test_token_count_filtered": 587141,
+    "train_activation_mean": 0.542070209980011,
+    "train_activation_std": 1.4917162656784058,
+    "train_activation_p95": 3.998046875,
+    "train_activation_p99": 6.515625,
+    "test_activation_mean": 0.5408620238304138,
+    "test_activation_std": 1.4868676662445068,
+    "test_activation_p95": 3.990234375,
+    "test_activation_p99": 6.4609375,
+    "train_positive_count_filtered": 337249,
+    "test_positive_count_filtered": 82075,
+    "train_positive_fraction_filtered": 0.13975508289396857,
+    "test_positive_fraction_filtered": 0.1397875467732623,
+    "activating_examples": [
+      {
+        "activation": 15.359375,
+        "token_id": 235322,
+        "token_text": "<",
+        "position": 112,
+        "context_text": "int curRun=1;\r\n    while (i<input.length()){\r\n        encoded.append(string("
+      },
+      {
+        "activation": 15.234375,
+        "token_id": 235322,
+        "token_text": "<",
+        "position": 156,
+        "context_text": "[],int lo, int hi){\n\tif(lo<hi){\n\t\tint j = partition(a,lo"
+      },
+      {
+        "activation": 14.8125,
+        "token_id": 235322,
+        "token_text": "<",
+        "position": 1087,
+        "context_text": "export const startsWith = (substring: string): Predicate<string> => y =>\n  y.startsWith(substring"
+      },
+      {
+        "activation": 14.8125,
+        "token_id": 7409,
+        "token_text": "Then",
+        "position": 1930,
+        "context_text": "is incredibly heavy and otherwise causes problems of its own.\n\nThen what? If they just scatter highly radioactive substances, it can"
+      },
+      {
+        "activation": 14.765625,
+        "token_id": 118153,
+        "token_text": "|:",
+        "position": 1354,
+        "context_text": "\" && echo $PWD)\"\n[[ $PATH =~ (^|:)$LIBDIR(:|$) ]] || PATH=\"$LIBDIR"
+      },
+      {
+        "activation": 14.703125,
+        "token_id": 968,
+        "token_text": "<",
+        "position": 2239,
+        "context_text": "int sum) throws IllegalArgumentException {\n        if (sum < 0) { throw new IllegalArgumentException(\"sum cannot be"
+      },
+      {
+        "activation": 14.671875,
+        "token_id": 5040,
+        "token_text": "Then",
+        "position": 1839,
+        "context_text": "mean is, \u201cJust do things the way I want.\u201d Then we will have world peace. Do you think that conformity is"
+      },
+      {
+        "activation": 14.640625,
+        "token_id": 5040,
+        "token_text": "Then",
+        "position": 536,
+        "context_text": "and we have to approach the solution from a different place. Then and only then will we be able to find a solution that"
+      },
+      {
+        "activation": 14.609375,
+        "token_id": 1492,
+        "token_text": "then",
+        "position": 756,
+        "context_text": "more than two days\nunless it contains raw egg, and then I don't keep it at all.\nI do"
+      },
+      {
+        "activation": 14.53125,
+        "token_id": 968,
+        "token_text": "<",
+        "position": 665,
+        "context_text": "= 2 * c - i;\nif (i < r){\np[i] = min(r -"
+      },
+      {
+        "activation": 14.21875,
+        "token_id": 2963,
+        "token_text": "then",
+        "position": 2845,
+        "context_text": "teaches to a specific context,\u201d said Mr. Gutierrez, \u201cthen it becomes a prudential matter, because when assessing the specific"
+      },
+      {
+        "activation": 14.1875,
+        "token_id": 18552,
+        "token_text": "^\\",
+        "position": 15,
+        "context_text": "CardNo(card) {\n    var reg = /(^\\d{15}$)|(^\\d{18}$)"
+      },
+      {
+        "activation": 14.15625,
+        "token_id": 968,
+        "token_text": "<",
+        "position": 78,
+        "context_text": "\"\";\r\n// for ($i = 1; $i < count($phpSelf) - $level; $i++)"
+      },
+      {
+        "activation": 14.078125,
+        "token_id": 5040,
+        "token_text": "Then",
+        "position": 533,
+        "context_text": "and greens. This was the water their lands would inhabit. Then they made their own clay from a recipe in Mudworks,"
+      },
+      {
+        "activation": 14.0703125,
+        "token_id": 18552,
+        "token_text": "^\\",
+        "position": 22,
+        "context_text": "var reg = /(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\"
+      }
+    ],
+    "activating_examples_count": 15,
+    "probe_a_auc_filtered": 0.8742110262970321,
+    "probe_b_auc_filtered": 0.9050832639601739,
+    "probe_c_auc_filtered": 0.8833255287219717,
+    "probe_a_auc_unfiltered": 0.8742110262970321,
+    "probe_b_auc_unfiltered": 0.9050832639601739,
+    "probe_c_auc_unfiltered": 0.8833255287219717,
+    "train_positive_fraction_unfiltered": 0.13975508289396857,
+    "test_positive_fraction_unfiltered": 0.1397875467732623,
+    "train_token_count_unfiltered": 2413143,
+    "test_token_count_unfiltered": 587141,
+    "balanced_train_size_filtered": 674498,
+    "balanced_train_size_unfiltered": 674498,
+    "notes": [
+      "unfiltered_not_run_no_padding"
+    ]
+  }
+]
