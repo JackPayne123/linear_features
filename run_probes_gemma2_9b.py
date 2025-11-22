@@ -17,26 +17,25 @@ from heapq import heappush, heappushpop
 os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
 
 # Configuration
-MODEL_NAME = "gemma-2-2b"
+MODEL_NAME = "gemma-2-9b"
 DEVICE = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 
 SAE_CONFIGS = [
     {
-        "name": "layer12_width16k_l0_82",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_12/width_16k/average_l0_82",
+        "name": "gemma2_9b_layer20_width16k_l0_108",
+        "sae_release": "gemma-scope-9b-pt-mlp",
+        "sae_id": "layer_20/width_16k/average_l0_108",
     },
     {
-        "name": "layer20_width16k_l0_71",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_20/width_16k/average_l0_71",
+        "name": "gemma2_9b_layer30_width16k_l0_116",
+        "sae_release": "gemma-scope-9b-pt-mlp",
+        "sae_id": "layer_30/width_16k/average_l0_116",
     },
     {
-        "name": "layer25_width16k_l0_116",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_25/width_16k/average_l0_116",
+        "name": "gemma2_9b_layer40_width16k_l0_74",
+        "sae_release": "gemma-scope-9b-pt-mlp",
+        "sae_id": "layer_40/width_16k/average_l0_74",
     },
-    
 ]
 
 import pandas as pd
@@ -145,7 +144,7 @@ def load_model():
     model = HookedTransformer.from_pretrained(
         MODEL_NAME,
         device=DEVICE,
-        dtype=torch.float16
+        dtype=torch.float16,
     )
     model.eval()
     return model
@@ -256,8 +255,8 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     # ... (keep existing code) ...
     
     # Validate dimensions before running
-    assert model.cfg.d_model == sae.cfg.d_in, \
-        f"Model d_model ({model.cfg.d_model}) does not match SAE d_in ({sae.cfg.d_in})"
+    # Use float16 for model to save VRAM if not already
+    # assert model.cfg.dtype == torch.float16 or model.cfg.dtype == torch.bfloat16
     
     print(f"Probing features: {FEATURES}")
     
@@ -296,6 +295,16 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
         
     print(f"\nUsing hook: {hook_name}")
     
+    # Extract layer index for optimization (stop_at_layer)
+    import re
+    layer_match = re.search(r"blocks\.(\d+)\.", hook_name)
+    if layer_match:
+        target_layer = int(layer_match.group(1))
+        print(f"Target layer: {target_layer} (optimizing by stopping at layer {target_layer + 1})")
+    else:
+        target_layer = None
+        print("Could not determine layer index from hook name. running full model.")
+    
     max_acts = {k: 0.0 for k in FEATURES}
     
     # Padding token handling
@@ -330,13 +339,18 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
         tokens = model.to_tokens(batch_texts, truncate=True, prepend_bos=True)
         
         # Truncate to manageable sequence length
-        if tokens.shape[1] > 8192: tokens = tokens[:, :8192]
+        if tokens.shape[1] > 4096: tokens = tokens[:, :4096]
         
         with torch.no_grad():
             x_embed, _ = get_embeddings(model, tokens)
             
             # Run with cache to get both layer 0 and SAE layer
-            _, cache = model.run_with_cache(tokens, names_filter=[hook_name, layer_0_hook])
+            # stop_at_layer optimizes memory by skipping later layers and logit computation
+            run_kwargs = {"names_filter": [hook_name, layer_0_hook]}
+            if target_layer is not None:
+                run_kwargs["stop_at_layer"] = target_layer + 1
+                
+            _, cache = model.run_with_cache(tokens, **run_kwargs)
             resid = cache[hook_name]
             layer0 = cache[layer_0_hook]
             
@@ -356,12 +370,13 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
         # Append per sequence (iterate batch), filtering padding
         for i in range(tokens.shape[0]):
             # Optimization: Convert to numpy immediately to save GPU memory
-            seq_embed.append(x_embed[i].cpu().numpy()) # [seq_len, d_model]
-            seq_layer0.append(layer0[i].cpu().numpy()) # [seq_len, d_model]
+            # Use float16 to save CPU RAM during accumulation
+            seq_embed.append(x_embed[i].cpu().numpy().astype(np.float16)) # [seq_len, d_model]
+            seq_layer0.append(layer0[i].cpu().numpy().astype(np.float16)) # [seq_len, d_model]
             seq_tokens.append(tokens[i].cpu().numpy()) # [seq_len]
             
             for fid in FEATURES:
-                seq_y[fid].append(feature_acts[..., fid][i].cpu().numpy()) # [seq_len]
+                seq_y[fid].append(feature_acts[..., fid][i].cpu().numpy().astype(np.float16)) # [seq_len]
                 
             total_tokens += tokens.shape[1]
         
@@ -414,27 +429,48 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     
     # Define both filtered and unfiltered flatten functions
     def flatten_data_filtered(indices, s_embed, s_layer0, s_tokens, pad_id, should_filter, desc="Flatten data (filtered)", show_progress=False):
-        batch_X = []
-        batch_L0 = []
-        batch_tokens = []
-        iterator = tqdm(indices, desc=desc, leave=False) if show_progress else indices
-        for i in iterator:
+        # Pass 1: Calculate total size to pre-allocate
+        total_len = 0
+        valid_counts = []
+        iterator_count = tqdm(indices, desc="Counting " + desc, leave=False) if show_progress else indices
+        
+        for i in iterator_count:
             toks = s_tokens[i]
-            # Create boolean mask: True if NOT padding
             if should_filter and pad_id is not None:
                 mask = (toks != pad_id)
+                count = mask.sum()
             else:
-                mask = np.ones(len(toks), dtype=bool) # No filtering
+                count = len(toks)
+            valid_counts.append(count)
+            total_len += count
             
-            if mask.sum() > 0:
-                batch_X.append(s_embed[i][mask])
-                batch_L0.append(s_layer0[i][mask])
-                batch_tokens.append(toks[mask])
-                
-        flat_X = np.concatenate(batch_X, axis=0)
-        flat_L0 = np.concatenate(batch_L0, axis=0)
-        flat_tokens = np.concatenate(batch_tokens, axis=0)
+        # Pre-allocate arrays to avoid intermediate list overhead
+        # Use float16 to match source data
+        d_model = s_embed[0].shape[1]
+        flat_X = np.empty((total_len, d_model), dtype=np.float16)
+        flat_L0 = np.empty((total_len, d_model), dtype=np.float16)
+        flat_tokens = np.empty((total_len,), dtype=s_tokens[0].dtype)
         
+        # Pass 2: Fill arrays
+        current_pos = 0
+        iterator_fill = tqdm(zip(indices, valid_counts), total=len(indices), desc=desc, leave=False) if show_progress else zip(indices, valid_counts)
+        
+        for i, count in iterator_fill:
+            if count == 0: continue
+            
+            toks = s_tokens[i]
+            if should_filter and pad_id is not None:
+                mask = (toks != pad_id)
+                flat_X[current_pos:current_pos+count] = s_embed[i][mask]
+                flat_L0[current_pos:current_pos+count] = s_layer0[i][mask]
+                flat_tokens[current_pos:current_pos+count] = toks[mask]
+            else:
+                flat_X[current_pos:current_pos+count] = s_embed[i]
+                flat_L0[current_pos:current_pos+count] = s_layer0[i]
+                flat_tokens[current_pos:current_pos+count] = toks
+            
+            current_pos += count
+            
         return flat_X, flat_L0, flat_tokens
     
     def flatten_labels_filtered(indices, s_y_list, s_tokens, pad_id, should_filter, desc="Flatten labels (filtered)", show_progress=False):
@@ -453,17 +489,32 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
         return np.concatenate(batch_y, axis=0).astype(np.float32, copy=False)
     
     def flatten_data_unfiltered(indices, s_embed, s_layer0, s_tokens, desc="Flatten data (unfiltered)", show_progress=False):
-        batch_X = []
-        batch_L0 = []
-        batch_tokens = []
-        iterator = tqdm(indices, desc=desc, leave=False) if show_progress else indices
-        for i in iterator:
-            batch_X.append(s_embed[i])
-            batch_L0.append(s_layer0[i])
-            batch_tokens.append(s_tokens[i])
-        flat_X = np.concatenate(batch_X, axis=0)
-        flat_L0 = np.concatenate(batch_L0, axis=0)
-        flat_tokens = np.concatenate(batch_tokens, axis=0)
+        # Pass 1: Calculate total size
+        total_len = 0
+        sizes = []
+        iterator_count = tqdm(indices, desc="Counting " + desc, leave=False) if show_progress else indices
+        for i in iterator_count:
+            sz = len(s_tokens[i])
+            sizes.append(sz)
+            total_len += sz
+            
+        # Pre-allocate
+        d_model = s_embed[0].shape[1]
+        flat_X = np.empty((total_len, d_model), dtype=np.float16)
+        flat_L0 = np.empty((total_len, d_model), dtype=np.float16)
+        flat_tokens = np.empty((total_len,), dtype=s_tokens[0].dtype)
+        
+        # Pass 2: Fill
+        current_pos = 0
+        iterator_fill = tqdm(zip(indices, sizes), total=len(indices), desc=desc, leave=False) if show_progress else zip(indices, sizes)
+        
+        for i, sz in iterator_fill:
+            if sz == 0: continue
+            flat_X[current_pos:current_pos+sz] = s_embed[i]
+            flat_L0[current_pos:current_pos+sz] = s_layer0[i]
+            flat_tokens[current_pos:current_pos+sz] = s_tokens[i]
+            current_pos += sz
+            
         return flat_X, flat_L0, flat_tokens
 
     def flatten_labels_unfiltered(indices, s_y_list, desc="Flatten labels (unfiltered)", show_progress=False):
@@ -549,6 +600,13 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
         # Just point to filtered data to avoid crashes if referenced, though we won't train on them
         X_train_unfilt, L0_train_unfilt, tokens_train_unfilt = X_train_filt, L0_train_filt, tokens_train_filt
         X_test_unfilt, L0_test_unfilt, tokens_test_unfilt = X_test_filt, L0_test_filt, tokens_test_filt
+
+    # Free up memory from source lists as they are now flattened into arrays
+    print("Freeing source lists to save RAM...")
+    del seq_embed
+    del seq_layer0
+    import gc
+    gc.collect()
     
     print("\nComputing top activation examples per feature...")
     top_activation_examples = extract_top_activation_examples(
@@ -843,8 +901,8 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     df_filt = pd.DataFrame(results_filtered)
     df_unfilt = pd.DataFrame(results_unfiltered)
     
-    filtered_path = f"{run_label}_probe_results_gemma2_filtered.csv"
-    unfiltered_path = f"{run_label}_probe_results_gemma2_unfiltered.csv"
+    filtered_path = f"{run_label}_probe_results_gemma2_9b_filtered.csv"
+    unfiltered_path = f"{run_label}_probe_results_gemma2_9b_unfiltered.csv"
     df_filt.to_csv(filtered_path, index=False)
     df_unfilt.to_csv(unfiltered_path, index=False)
     
@@ -858,11 +916,11 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     df_comparison["probe_b_auc_diff"] = df_unfilt["probe_b_auc"] - df_filt["probe_b_auc"]
     df_comparison["probe_c_auc_diff"] = df_unfilt["probe_c_auc"] - df_filt["probe_c_auc"]
     
-    comparison_path = f"{run_label}_probe_results_gemma2_comparison.csv"
+    comparison_path = f"{run_label}_probe_results_gemma2_9b_comparison.csv"
     df_comparison.to_csv(comparison_path, index=False)
     
-    analysis_json_path = f"{run_label}_per_feature_analysis_gemma2.json"
-    analysis_summary_path = f"{run_label}_per_feature_analysis_gemma2_summary.csv"
+    analysis_json_path = f"{run_label}_per_feature_analysis_gemma2_9b.json"
+    analysis_summary_path = f"{run_label}_per_feature_analysis_gemma2_9b_summary.csv"
     with open(analysis_json_path, "w") as f:
         json.dump(feature_analysis_records, f, indent=2)
     

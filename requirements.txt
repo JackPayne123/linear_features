@@ -6,4 +6,4 @@ torch
 numpy
 tqdm
 einops
-
+huggingface_hub[cli]

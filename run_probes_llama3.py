@@ -17,26 +17,30 @@ from heapq import heappush, heappushpop
 os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
 
 # Configuration
-MODEL_NAME = "gemma-2-2b"
+MODEL_NAME = "meta-llama/Llama-3.1-8B"
 DEVICE = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+
+SAE_RELEASE = "fnlp/Llama3_1-8B-Base-LXR-8x"
 
 SAE_CONFIGS = [
     {
-        "name": "layer12_width16k_l0_82",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_12/width_16k/average_l0_82",
+        "name": "llama31_layer10_lxr8x",
+        "sae_release": SAE_RELEASE,
+        "sae_id": "llama3.1-8b/10-llamascope-res-32k",
+        "hook_point": "blocks.10.hook_resid_post"
     },
     {
-        "name": "layer20_width16k_l0_71",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_20/width_16k/average_l0_71",
+        "name": "llama31_layer20_lxr8x",
+        "sae_release": SAE_RELEASE,
+        "sae_id": "llama3.1-8b/20-llamascope-res-32k",
+        "hook_point": "blocks.20.hook_resid_post"
     },
     {
-        "name": "layer25_width16k_l0_116",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_25/width_16k/average_l0_116",
+        "name": "llama31_layer30_lxr8x",
+        "sae_release": SAE_RELEASE,
+        "sae_id": "llama3.1-8b/30-llamascope-res-32k",
+        "hook_point": "blocks.30.hook_resid_post"
     },
-    
 ]
 
 import pandas as pd
@@ -238,7 +242,7 @@ import sklearn.linear_model
 
 # ... (keep existing imports) ...
 
-def run_experiment(model, sae, sae_release, sae_id, run_label):
+def run_experiment(model, sae, sae_release, sae_id, run_label, hook_override=None):
     # Set random seeds for reproducibility
     import random
     random.seed(0)
@@ -272,7 +276,7 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     seq_y = {k: [] for k in FEATURES}
     seq_tokens = [] # Store token IDs for analysis
     
-    n_tokens = 1_000_000
+    n_tokens = 3_000_000
     total_tokens = 0
     batch_size = 1 # Minimal batch size for Gemma 2 2B on RTX 3060
     
@@ -280,13 +284,18 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     pbar = tqdm(total=n_tokens)
     
     # Determine hook name manually if not in config
-    if hasattr(sae.cfg, "hook_name"):
+    if hook_override is not None:
+        hook_name = hook_override
+        print(f"Using hook override from config: {hook_name}")
+    elif hasattr(sae.cfg, "hook_name"):
         hook_name = sae.cfg.hook_name
     elif hasattr(sae.cfg, "hook_point"):
         hook_name = sae.cfg.hook_point
     else:
         import re
         match = re.search(r"layer_(\d+)", sae_id)
+        if not match:
+            match = re.search(r"blocks\.(\d+)", sae_id)
         if match:
             layer = int(match.group(1))
             hook_name = f"blocks.{layer}.hook_resid_post"
@@ -843,8 +852,8 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     df_filt = pd.DataFrame(results_filtered)
     df_unfilt = pd.DataFrame(results_unfiltered)
     
-    filtered_path = f"{run_label}_probe_results_gemma2_filtered.csv"
-    unfiltered_path = f"{run_label}_probe_results_gemma2_unfiltered.csv"
+    filtered_path = f"{run_label}_probe_results_llama3_filtered.csv"
+    unfiltered_path = f"{run_label}_probe_results_llama3_unfiltered.csv"
     df_filt.to_csv(filtered_path, index=False)
     df_unfilt.to_csv(unfiltered_path, index=False)
     
@@ -858,11 +867,11 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     df_comparison["probe_b_auc_diff"] = df_unfilt["probe_b_auc"] - df_filt["probe_b_auc"]
     df_comparison["probe_c_auc_diff"] = df_unfilt["probe_c_auc"] - df_filt["probe_c_auc"]
     
-    comparison_path = f"{run_label}_probe_results_gemma2_comparison.csv"
+    comparison_path = f"{run_label}_probe_results_llama3_comparison.csv"
     df_comparison.to_csv(comparison_path, index=False)
     
-    analysis_json_path = f"{run_label}_per_feature_analysis_gemma2.json"
-    analysis_summary_path = f"{run_label}_per_feature_analysis_gemma2_summary.csv"
+    analysis_json_path = f"{run_label}_per_feature_analysis_llama3.json"
+    analysis_summary_path = f"{run_label}_per_feature_analysis_llama3_summary.csv"
     with open(analysis_json_path, "w") as f:
         json.dump(feature_analysis_records, f, indent=2)
     
@@ -1016,7 +1025,14 @@ if __name__ == "__main__":
         print("=" * 80)
         sae = load_sae(config["sae_release"], config["sae_id"])
         try:
-            run_experiment(model, sae, config["sae_release"], config["sae_id"], run_label)
+            run_experiment(
+                model,
+                sae,
+                config["sae_release"],
+                config["sae_id"],
+                run_label,
+                hook_override=config.get("hook_point")
+            )
         finally:
             del sae
             clear_cuda_cache()

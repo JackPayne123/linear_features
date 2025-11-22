@@ -17,26 +17,27 @@ from heapq import heappush, heappushpop
 os.environ['PYTORCH_ALLOC_CONF'] = 'expandable_segments:True'
 
 # Configuration
-MODEL_NAME = "gemma-2-2b"
+MODEL_NAME = "gemma-3-1b"
 DEVICE = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+
+SAE_RELEASE = "chanind/gemma-3-1b-batch-topk-matryoshka-saes-w-32k-l0-40"
 
 SAE_CONFIGS = [
     {
-        "name": "layer12_width16k_l0_82",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_12/width_16k/average_l0_82",
+        "name": "gemma3_layer12_width32k_l0_40",
+        "sae_release": SAE_RELEASE,
+        "sae_id": "blocks.12.hook_resid_post/width_32k/average_l0_40",
     },
     {
-        "name": "layer20_width16k_l0_71",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_20/width_16k/average_l0_71",
+        "name": "gemma3_layer20_width32k_l0_40",
+        "sae_release": SAE_RELEASE,
+        "sae_id": "blocks.20.hook_resid_post/width_32k/average_l0_40",
     },
     {
-        "name": "layer25_width16k_l0_116",
-        "sae_release": "gemma-scope-2b-pt-res",
-        "sae_id": "layer_25/width_16k/average_l0_116",
+        "name": "gemma3_layer24_width32k_l0_40",
+        "sae_release": SAE_RELEASE,
+        "sae_id": "blocks.24.hook_resid_post/width_32k/average_l0_40",
     },
-    
 ]
 
 import pandas as pd
@@ -272,7 +273,7 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     seq_y = {k: [] for k in FEATURES}
     seq_tokens = [] # Store token IDs for analysis
     
-    n_tokens = 1_000_000
+    n_tokens = 3_000_000
     total_tokens = 0
     batch_size = 1 # Minimal batch size for Gemma 2 2B on RTX 3060
     
@@ -287,6 +288,8 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     else:
         import re
         match = re.search(r"layer_(\d+)", sae_id)
+        if not match:
+            match = re.search(r"blocks\.(\d+)", sae_id)
         if match:
             layer = int(match.group(1))
             hook_name = f"blocks.{layer}.hook_resid_post"
@@ -843,8 +846,8 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     df_filt = pd.DataFrame(results_filtered)
     df_unfilt = pd.DataFrame(results_unfiltered)
     
-    filtered_path = f"{run_label}_probe_results_gemma2_filtered.csv"
-    unfiltered_path = f"{run_label}_probe_results_gemma2_unfiltered.csv"
+    filtered_path = f"{run_label}_probe_results_gemma3_filtered.csv"
+    unfiltered_path = f"{run_label}_probe_results_gemma3_unfiltered.csv"
     df_filt.to_csv(filtered_path, index=False)
     df_unfilt.to_csv(unfiltered_path, index=False)
     
@@ -858,11 +861,11 @@ def run_experiment(model, sae, sae_release, sae_id, run_label):
     df_comparison["probe_b_auc_diff"] = df_unfilt["probe_b_auc"] - df_filt["probe_b_auc"]
     df_comparison["probe_c_auc_diff"] = df_unfilt["probe_c_auc"] - df_filt["probe_c_auc"]
     
-    comparison_path = f"{run_label}_probe_results_gemma2_comparison.csv"
+    comparison_path = f"{run_label}_probe_results_gemma3_comparison.csv"
     df_comparison.to_csv(comparison_path, index=False)
     
-    analysis_json_path = f"{run_label}_per_feature_analysis_gemma2.json"
-    analysis_summary_path = f"{run_label}_per_feature_analysis_gemma2_summary.csv"
+    analysis_json_path = f"{run_label}_per_feature_analysis_gemma3.json"
+    analysis_summary_path = f"{run_label}_per_feature_analysis_gemma3_summary.csv"
     with open(analysis_json_path, "w") as f:
         json.dump(feature_analysis_records, f, indent=2)
     
