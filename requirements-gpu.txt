@@ -1,0 +1,11 @@
+# GPU-specific dependencies
+# Only install these on systems with NVIDIA GPUs and CUDA 12.x
+# 
+# Installation:
+#   uv pip install -r requirements-gpu.txt
+#
+# Or manually:
+#   uv pip install cuml-cu12
+
+cuml-cu12
+
